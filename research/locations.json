@@ -1,0 +1,383 @@
+[{
+    "address": "315 Bowery New York, NY 10003",
+    "range": [19731200, 20061015],
+    "title": "CBGB"
+},{
+    "address": "1941 Broadway, New York, NY",
+    "range": [19660911, -1],
+    "title": "Lincoln Center's Alice Tully Hall opens"
+},{
+    "address": "67-01 110th Street, Forest Hills, New York",
+    "range": [19740000, 19740000],
+    "title": "Formation of Ramones",
+    "description": "They met in high school in Forest Hills"
+},{
+    "address": "673 Broadway New York, NY 10012",
+    "range": [19700000, 19730803],
+    "title": "Mercer Arts Center, Early Punk Shows",
+    "description": "Building collapsed in 1973",
+    "sources": ["http://en.wikipedia.org/wiki/Mercer_Arts_Center"]
+},{
+    "address": "47-3 Queens Blvd Queens, NY 11104",
+    "range": [19720000, 19750000],
+    "title": "Popcorn Pub/Coventry",
+    "description": "Hosted early punk shows, particularly the New York Dolls. Also had first KISS performance in NYC, 10 people there including bar staff.  Started 1972, became Coventry 1973.",
+    "sources": [
+        "http://streetsyoucrossed.blogspot.com/2005/09/starship-trouper.html",
+        "http://thisaintthesummeroflove.blogspot.com/2009/09/popcorn-pubthe-coventry-great-early-70s.html"
+    ]
+},{
+    "address": "485 W Broadway Manhattan, NY 10012",
+    "range": [19700000, 19700000],
+    "title": "OK Harris gallery",
+    "description": "First suicide show, first billing of 'punk music'",
+    "sources": [
+        "http://en.wikipedia.org/wiki/OK_Harris_Gallery",
+        "http://en.wikipedia.org/wiki/Suicide_%28band%29#cite_note-1"
+    ]
+},{
+    "address": "213 Park Ave S Manhattan, NY 10003",
+    "range": [19750000, 19811100],
+    "title": "Max's Kansas City II",
+    "description": "Second incarnation of Max's Kansas City",
+    "sources": ["http://en.wikipedia.org/wiki/Max%27s_Kansas_City"],
+    "todo": true
+},{
+    "address": "57 St Mark's Pl Manhattan, NY 10003",
+    "range": [19790000, 19830000],
+    "title": "Club 57",
+    "sources": [
+        "http://findarticles.com/p/articles/mi_m0268/is_2_38/ai_57475770/",
+        "http://walkthenight.tumblr.com/post/3493461022/club57"
+    ],
+    "todo": true
+},{
+    "address": "101 Avenue A New York, NY 10009",
+    "range": [19790000, -1],
+    "title": "Pyramid Club",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Pyramid_Club"
+    ]
+},{
+    "address": "337 E 8th St New York, NY 10009",
+    "range": [19831031, 19851028],
+    "title": "8BC",
+    "description": "Closed for improper zoning",
+    "sources": [
+        "http://en.wikipedia.org/wiki/8BC",
+        "http://ephemeralnewyork.wordpress.com/2009/05/06/a-short-lived-club-in-the-1980s-east-village/",
+        "http://rightherenyc.com/MUSIC_SCENE_ROCK.html"
+    ]
+},{
+    "address": "23 St Mark's Pl New York, NY 10003",
+    "range": [19660000, 19710000],
+    "title": "The Electric Circus and The Dom",
+    "sources": ["http://rightherenyc.com/MUSIC_SCENE_ROCK.html"]
+},{
+    "address": "105 2nd Ave New York, NY 10003",
+    "range": [19680308, 19710628],
+    "title": "Fillmore East",
+    "sources": ["http://rightherenyc.com/MUSIC_SCENE_ROCK.html", "http://en.wikipedia.org/wiki/Fillmore_East"]
+},{
+    "address": "77 White St Manhattan, NY 10013",
+    "range": [19781000, 19830000],
+    "title": "Mudd Club",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Mudd_Club"
+    ]
+},{
+    "address": "52 W 8th St Manhattan, NY 10011",
+    "range": [19700826, -1],
+    "title": "Electric Lady Studios",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Electric_Lady_Studios"
+    ]
+},{
+    "address": "150-34 12th Ave Whitestone, NY 11357",
+    "range": [19760000, 19760000],
+    "title": "Whitestone High School",
+    "description": "Fleshtones met here",
+    "sources": [
+        "http://blogs.riverfronttimes.com/rftmusic/2010/11/the_fleshtones_interview_2010_keith_streng_new_york_ramones_book_documentary_off_broadway_st_louis_november_6.php"
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [, ],
+    "title": "",
+    "sources": [
+        ""
+    ]
+}]
