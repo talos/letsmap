@@ -19,7 +19,7 @@
    ***/
 
 /*jslint browser: true*/
-/*globals Backbone, $, LetsMap, Mustache*/
+/*globals Backbone, $, LetsMap, Mustache, MM*/
 "use strict";
 
 /**
@@ -27,23 +27,31 @@
  * @constructor
  * @extends Backbone.View
  */
-LetsMap.AppView = Backbone.View.extend({
-    id: 'app',
-
+LetsMap.MapView = Backbone.View.extend({
+    id: 'map',
     /**
      * @this {LetsMap.AppView}
      */
     initialize: function (options) {
-        this.map = new LetsMap.MapView({});
-        this.map.$el.appendTo(this.$el);
+        this.base = new MM.StamenTileLayer("toner");
+        this.slider = new LetsMap.SliderView();
+        this.slider.$el.appendTo(this.$el);
+        this.slider.render();
+        this.$mapHolder = $('<div />')
+            .attr({'id': 'mapHolder'})
+            .appendTo(this.$el);
     },
 
     /**
      * @this {LetsMap.AppView}
      */
     render: function () {
-        this.map.render();
+        // initial setup
+        if (!this.map) {
+            this.map = new MM.Map(this.$mapHolder.attr('id'), this.base);
+            this.map.setCenterZoom(new MM.Location(40.77, -73.98), 12);
+        }
+
         return this;
     }
 });
-

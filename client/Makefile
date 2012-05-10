@@ -1,6 +1,9 @@
+# tr -us "[:space:]" " " < templates/app.mustache | sed "s/ /\\\ /g"
+# --define APP_TEMPLATE=\'`tr -d "[:space:]" < templates/app.mustache`\' \
+#
 all:
 	java -jar ../tools/closure-compiler/compiler.jar \
-	    --compilation_level ADVANCED_OPTIMIZATIONS \
+	    --compilation_level SIMPLE_OPTIMIZATIONS \
 	    --process_jquery_primitives \
 	    --summary_detail_level 3 \
 	    --warning_level VERBOSE \

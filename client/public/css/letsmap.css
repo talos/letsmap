@@ -1,0 +1,28 @@
+#map {
+}
+
+#map #mapHolder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#map .slider {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 10px;
+    border: 1px solid red;
+    z-index: 100;
+}
+
+#map .slider .marker {
+    position: relative;
+    left: 0px;
+    top: -5px;
+    height: 20px;
+    width: 8px;
+    cursor: pointer;
+    border: 1px solid red;
+}

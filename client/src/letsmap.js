@@ -19,19 +19,18 @@
    ***/
 
 /*jslint browser: true*/
-/*globals Backbone, $, LetsMap*/
+/*globals Backbone, $*/
 "use strict";
 
 /**
  * Global LetsMap reference.
  * @type {Object}
  */
-var LetsMap = LetsMap || {};
+var LetsMap = {};
 
 $(document).ready(function () {
-    var v = new LetsMap.AppView()
-        .render()
-        .$el
-        .appendTo($('body'));
+    var v = new LetsMap.AppView({});
+    v.$el.appendTo('body');
+    v.render();
     //Backbone.history.start({ pushState: true });
 });

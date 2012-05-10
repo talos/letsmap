@@ -178,6 +178,8 @@ Backbone.View.prototype.initialize = function(args) {};
  * @return {Backbone.View}
  */
 Backbone.View.prototype.render = function(){};
+/** @type {string} */
+Backbone.View.prototype.id;
 /** @type {Element} */
 Backbone.View.prototype.el;
 /** @type {jQueryObject} */
