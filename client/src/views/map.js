@@ -18,9 +18,12 @@
    *
    ***/
 
-/*jslint browser: true*/
+/*jslint browser: true, nomen: true*/
 /*globals Backbone, $, LetsMap, Mustache, MM*/
 "use strict";
+
+/** @define {string} */
+var LETS_MAP_DEFAULT_BASE_LAYER = "toner";
 
 /**
  * @param {Object} options
@@ -28,28 +31,39 @@
  * @extends Backbone.View
  */
 LetsMap.MapView = Backbone.View.extend({
+
     id: 'map',
     /**
      * @this {LetsMap.AppView}
      */
     initialize: function (options) {
-        this.base = new MM.StamenTileLayer("toner");
+        /** @type {string} */
+        this.MAP_HOLDER_ID = 'map_holder';
+
+        /** @type {MM.StamenTileLayer} */
+        this.base = new MM.StamenTileLayer(LETS_MAP_DEFAULT_BASE_LAYER);
+
+        /** @type {LetsMap.SliderView} */
         this.slider = new LetsMap.SliderView();
         this.slider.$el.appendTo(this.$el);
         this.slider.render();
+
+        /** @type {jQueryObject} **/
         this.$mapHolder = $('<div />')
-            .attr({'id': 'mapHolder'})
+            .attr({'id': this.MAP_HOLDER_ID})
             .appendTo(this.$el);
+
+        /** @type {MM.Map} */
+        this._map = null;
     },
 
     /**
      * @this {LetsMap.AppView}
      */
     render: function () {
-        // initial setup
-        if (!this.map) {
-            this.map = new MM.Map(this.$mapHolder.attr('id'), this.base);
-            this.map.setCenterZoom(new MM.Location(40.77, -73.98), 12);
+        if (!this._map) {
+            this._map = new MM.Map(this.MAP_HOLDER_ID, this.base);
+            this._map.setCenterZoom(new MM.Location(40.77, -73.98), 12);
         }
 
         return this;

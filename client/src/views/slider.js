@@ -18,8 +18,8 @@
    *
    ***/
 
-/*jslint nomen: true, browser: true*/
-/*globals _, Backbone, $, LetsMap*/
+/*jslint nomen: true, browser: true, maxlen: 79*/
+/*globals _, Backbone, $, LetsMap, LETS_MAP_FPS*/
 "use strict";
 
 /**
@@ -48,8 +48,23 @@ LetsMap.SliderView = Backbone.View.extend({
      * @this {LetsMap.SliderView}
      */
     initialize: function (options) {
+        /** @type {Object} **/
         this.options = _.extend(SLIDER_VIEW_DEFAULTS, options);
-        this.$el.html('<div class="marker"></div>');
+
+        /** @type {jQueryObject} */
+        this.$marker = $('<div />').addClass('marker');
+        this.$el.append(this.$marker);
+        _.bindAll(this, 'drag', 'endDrag');
+        $(window).mouseup(this.endDrag);
+
+        /** @type {function(jQuery.event)} */
+        this.drag = this.drag || undefined;
+
+        /** @type {function(jQuery.event)} */
+        this.endDrag = this.endDrag || undefined;
+
+        /** @type {function(): number} */
+        this.getValue = this.getValue || undefined;
     },
 
     /**
@@ -60,29 +75,44 @@ LetsMap.SliderView = Backbone.View.extend({
     },
 
     /**
+     * @param {jQuery.event} evt
      * @this {LetsMap.SliderView}
      */
     startDrag: function (evt) {
-        this.endDrag();
-        this.moveListener = window.addEventListener('mousemove', _.bind(this.drag, this));
-        this.upListener = window.addEventListener('mouseup', _.bind(this.endDrag, this));
+        $(window).bind('mousemove', this.drag);
     },
 
     /**
+     * @param {jQuery.event} evt
      * @this {LetsMap.SliderView}
      */
     drag: _.debounce(function (evt) {
-        window.console.log(evt);
-    }, 100),
+        var x = evt.pageX - this.$el.offset().left,
+            width = this.$el.width();
+        x = x < 0 ? 0 : x;
+        x = x > width ? width : x;
+        this.$marker.css({
+            left: x + 'px'
+        });
+    }, 1000 / LETS_MAP_FPS),
 
     /**
+     * @param {jQuery.event} evt
      * @this {LetsMap.SliderView}
      */
     endDrag: function (evt) {
-        _.each([this.moveListener, this.upListener], function (l) {
-            if (l) {
-                window.removeEventListener(l);
-            }
-        });
+        $(window).unbind('mousemove', this.drag);
+    },
+
+    /**
+     * @returns {number} The current numeric value of slider.
+     * @this {LetsMap.SliderView}
+     */
+    getValue: function () {
+        var width = this.$el.width(),
+            range = this.options.max - this.options.min,
+            ratio = range / width;
+
+        return this.options.min + (this.$marker.offsetParent() * ratio);
     }
 });

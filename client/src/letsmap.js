@@ -28,6 +28,12 @@
  */
 var LetsMap = {};
 
+/**
+ * The FPS we're aiming for
+ * @define {number}
+ */
+var LETS_MAP_FPS = 100;
+
 $(document).ready(function () {
     var v = new LetsMap.AppView({});
     v.$el.appendTo('body');

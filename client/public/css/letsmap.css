@@ -25,4 +25,6 @@
     width: 8px;
     cursor: pointer;
     border: 1px solid red;
+    background: white;
+    z-index: 101;
 }

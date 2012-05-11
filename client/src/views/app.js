@@ -34,6 +34,7 @@ LetsMap.AppView = Backbone.View.extend({
      * @this {LetsMap.AppView}
      */
     initialize: function (options) {
+        /** @type {LetsMap.MapView} */
         this.map = new LetsMap.MapView({});
         this.map.$el.appendTo(this.$el);
     },
