@@ -200,3 +200,20 @@ Backbone.View.prototype.delegateEvents = function(events){};
  * @param {Object=} events
  */
 Backbone.View.prototype.undelegateEvents = function(events){};
+
+// ADDED
+
+/**
+ * @type {function(string, ...[*])}
+ */
+Backbone.View.prototype.trigger = function(eventName, optArgs){};
+
+/**
+ * @type {function(string, function(...[*]), Object=)}
+ */
+Backbone.View.prototype.on = function(eventName, callback, optContext){};
+
+/**
+ * @type {function(string=, function(...[*])=)}
+ */
+Backbone.View.prototype.off = function(optEventName, optCallback){};

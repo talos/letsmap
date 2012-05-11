@@ -423,13 +423,6 @@ _.range = function(start, opt_stop, opt_step) {};
 _.bindAll = function(obj, methodNames) {};
 
 /**
- * @param {function(...[?])} func
- * @param {Object} obj
- * @return {function(...[?])}
- */
-//_.bind = function(func, obj) {};
-
-/**
  * @param {Function} func
  * @param {Function=} opt_hasher
  */
