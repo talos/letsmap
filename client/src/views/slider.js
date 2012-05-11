@@ -18,16 +18,19 @@
    *
    ***/
 
-/*jslint nomen: true, browser: true, maxlen: 79*/
+/*jslint sub: true, nomen: true, browser: true, maxlen: 79, vars: true*/
 /*globals _, Backbone, $, LetsMap, LETS_MAP_FPS*/
 "use strict";
 
 /**
- * @enum
+ * @constant {Object}
  */
 var SLIDER_VIEW_DEFAULTS = {
     max: 2012,
-    min: 1966
+    min: 1966,
+
+    // whether to round to whole values.
+    quantize: true
 };
 
 /**
@@ -39,11 +42,8 @@ LetsMap.SliderView = Backbone.View.extend({
 
     className: 'slider',
 
-    events: {
-        'mousedown .marker': 'startDrag'
-    },
-
     /**
+     * @override
      * @param {Object} options
      * @this {LetsMap.SliderView}
      */
@@ -54,20 +54,29 @@ LetsMap.SliderView = Backbone.View.extend({
         /** @type {jQueryObject} */
         this.$marker = $('<div />').addClass('marker');
         this.$el.append(this.$marker);
-        _.bindAll(this, 'drag', 'endDrag');
+
+        /** @type {function(jQuery.event)} */
+        this.startDrag = _.myBind(this.startDrag, this);
+
+        /** @type {function(jQuery.event)} */
+        this.drag = _.myBind(this.drag, this);
+
+        /** @type {function(jQuery.event)} */
+        this.endDrag = _.myBind(this.endDrag, this);
+
+        /* Backbone can't have this property munged by closure. */
+        this['events'] = {
+            'mousedown .marker': this.startDrag
+        };
+
         $(window).mouseup(this.endDrag);
-
-        /** @type {function(jQuery.event)} */
-        this.drag = this.drag || undefined;
-
-        /** @type {function(jQuery.event)} */
-        this.endDrag = this.endDrag || undefined;
 
         /** @type {function(): number} */
         this.getValue = this.getValue || undefined;
     },
 
     /**
+     * @override
      * @this {LetsMap.SliderView}
      */
     render: function () {
@@ -87,10 +96,28 @@ LetsMap.SliderView = Backbone.View.extend({
      * @this {LetsMap.SliderView}
      */
     drag: _.debounce(function (evt) {
-        var x = evt.pageX - this.$el.offset().left,
-            width = this.$el.width();
+        /** @type {number} **/
+        var x = evt.pageX - this.$el.offset().left;
+
+        /** @type {number} **/
+        var width = this.$el.width();
+
+        /** @type {number} **/
+        var range = this.options.max - this.options.min;
+
+        /** @type {number} **/
+        var ratio = range / width;
+
+        /** @type {number} **/
+        var val;
+
         x = x < 0 ? 0 : x;
         x = x > width ? width : x;
+
+        if (this.options.quantize) {
+            x = Math.round(x * ratio) / ratio;
+        }
+
         this.$marker.css({
             left: x + 'px'
         });
@@ -101,6 +128,7 @@ LetsMap.SliderView = Backbone.View.extend({
      * @this {LetsMap.SliderView}
      */
     endDrag: function (evt) {
+        this.trigger('endDrag', this.getValue());
         $(window).unbind('mousemove', this.drag);
     },
 

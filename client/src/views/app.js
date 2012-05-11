@@ -18,9 +18,15 @@
    *
    ***/
 
-/*jslint browser: true*/
-/*globals Backbone, $, LetsMap, Mustache*/
+/*jslint browser: true, nomen: true*/
+/*globals Backbone, $, LetsMap, Mustache, _*/
 "use strict";
+
+// Ew, but closure compiler has special ideas about the meaning of 'bind'.
+/**
+ * @type{function(function(jQuery.event), Object): function(...[*])}
+ */
+_.myBind = function () { return _.bind.apply(this, arguments); };
 
 /**
  * @param {Object} options
