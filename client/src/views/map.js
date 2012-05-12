@@ -19,7 +19,7 @@
    ***/
 
 /*jslint browser: true, nomen: true*/
-/*globals Backbone, $, LetsMap, Mustache, MM*/
+/*globals Backbone, $, LetsMap, Mustache, L, _*/
 "use strict";
 
 /**
@@ -27,6 +27,16 @@
  * @define {string}
  */
 var LETS_MAP_BASE_LAYER_DEFAULT = 'toner';
+
+var coords = [[40.77, -73.98], [40.8, -74]];
+
+var icon = new LetsMap.Icon();
+
+var MARKERS = _.map(coords, function (coord) {
+    return new L.Marker(new L.LatLng(coord[0], coord[1]), {
+        icon: icon
+    });
+});
 
 /**
  * @param {Object} options
@@ -43,20 +53,21 @@ LetsMap.MapView = Backbone.View.extend({
         /** @type {string} */
         this.MAP_HOLDER_ID = 'mapHolder';
 
-        /** @type {MM.StamenTileLayer} */
-        this.base = new MM.StamenTileLayer(LETS_MAP_BASE_LAYER_DEFAULT);
+        /** @type {L.StamenTileLayer} */
+        this.base = new L.StamenTileLayer(LETS_MAP_BASE_LAYER_DEFAULT);
 
         /** @type {LetsMap.SliderView} */
         this.slider = new LetsMap.SliderView();
         this.slider.$el.appendTo(this.$el);
         this.slider.render();
+        this.slider.on('endDrag', _.myBind(this.render, this));
 
         /** @type {jQueryObject} **/
         this.$mapHolder = $('<div />')
             .attr({'id': this.MAP_HOLDER_ID})
             .appendTo(this.$el);
 
-        /** @type {?MM.Map} **/
+        /** @type {?L.Map} **/
         this._map = null;
     },
 
@@ -66,9 +77,19 @@ LetsMap.MapView = Backbone.View.extend({
     render: function () {
         // initial setup
         if (!this._map) {
-            this._map = new MM.Map(this.MAP_HOLDER_ID, this.base);
-            this._map.setCenterZoom(new MM.Location(40.77, -73.98), 12);
+            this._map = new L.Map(this.MAP_HOLDER_ID, {
+                center: new L.LatLng(40.77, -73.98),
+                zoom: 12
+            });
+            this._map.addLayer(this.base);
+
+            _.each(MARKERS, _.myBind(function (marker) {
+                this._map.addLayer(marker);
+            }, this));
         }
+
+        // update layers based off slider value.
+        //window.console.log(this.slider.getValue());
 
         return this;
     }

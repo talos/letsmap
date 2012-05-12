@@ -34,6 +34,8 @@ var SLIDER_VIEW_DEFAULTS = {
 };
 
 /**
+ * A slider view that emits 'drag' and 'endDrag' events with the current value
+ * as the argument.
  * @param {Object} options
  * @constructor
  * @extends Backbone.View
@@ -89,6 +91,7 @@ LetsMap.SliderView = Backbone.View.extend({
      */
     startDrag: function (evt) {
         $(window).bind('mousemove', this.drag);
+        return false;
     },
 
     /**
@@ -100,7 +103,7 @@ LetsMap.SliderView = Backbone.View.extend({
         var x = evt.pageX - this.$el.offset().left;
 
         /** @type {number} **/
-        var width = this.$el.width();
+        var width = this.$el.outerWidth();
 
         /** @type {number} **/
         var range = this.options.max - this.options.min;
@@ -121,6 +124,9 @@ LetsMap.SliderView = Backbone.View.extend({
         this.$marker.css({
             left: x + 'px'
         });
+
+        this.trigger('drag', this.getValue());
+        return false;
     }, 1000 / LETS_MAP_FPS),
 
     /**
@@ -130,17 +136,29 @@ LetsMap.SliderView = Backbone.View.extend({
     endDrag: function (evt) {
         this.trigger('endDrag', this.getValue());
         $(window).unbind('mousemove', this.drag);
+        return false;
     },
 
     /**
-     * @returns {number} The current numeric value of slider.
+     * @return {number} The current numeric value of slider.
      * @this {LetsMap.SliderView}
      */
     getValue: function () {
-        var width = this.$el.width(),
-            range = this.options.max - this.options.min,
-            ratio = range / width;
+        /** @type {number} **/
+        var width = this.$el.outerWidth();
 
-        return this.options.min + (this.$marker.offsetParent() * ratio);
+        /** @type {number} **/
+        var range = this.options.max - this.options.min;
+
+        /** @type {number} **/
+        var ratio = range / width;
+
+        /** @type {number} **/
+        var left = this.$marker.position().left;
+
+        /** @type {number} **/
+        var val = this.options.min + (left * ratio);
+
+        return this.options.quantize ? Math.round(val) : val;
     }
 });
