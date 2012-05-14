@@ -28,6 +28,27 @@
  */
 var LetsMap = {};
 
+LetsMap.Util = {};
+
+/**
+ * Turn a number a la 20061201 to the date 12/1/2006.  If passed null, returns
+ * null.
+ * @param {Number} num
+ * @return {(Date|null)}
+ */
+LetsMap.Util.parseDate = function (num) {
+    if (num === null) {
+        return null;
+    }
+    var str = String(num),
+        d = new Date(str.slice(0, 4), str.slice(4, 6), str.slice(6, 8));
+    if (String(d) === 'Invalid Date') {
+        throw num + " is not a date.";
+    } else {
+        return d;
+    }
+};
+
 /**
  * The FPS we're aiming for
  * @define {number}

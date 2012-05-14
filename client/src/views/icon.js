@@ -26,13 +26,11 @@
  * @constructor
  * @extends L.Icon
  */
-LetsMap.Icon = L.Icon.extend({
-    iconUrl: null,
-    shadowUrl: null,
-    //iconUrl: '../images/marker.png',
-    //shadowUrl: '../images/marker-shadow.png',
+LetsMap.Icon = L.Icon.extend({options: {
+    iconUrl: 'images/marker.png',
+    shadowUrl: 'images/marker-shadow.png',
     iconSize: new L.Point(38, 95),
     shadowSize: new L.Point(68, 95),
     iconAnchor: new L.Point(22, 94),
     popupAnchor: new L.Point(-3, -76)
-});
+}});

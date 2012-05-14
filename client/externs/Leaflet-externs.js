@@ -55,3 +55,11 @@ L.Layer = function () {};
   * @extends {L.Layer}
   */
 L.StamenTileLayer = function (name) {};
+
+L.Util = {};
+
+/**
+ * @param {Object} obj
+ * @param {Object} options
+ */
+L.Util.setOptions = function (obj, options) {};

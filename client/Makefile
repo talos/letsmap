@@ -2,8 +2,11 @@
 # --define APP_TEMPLATE=\'`tr -d "[:space:]" < templates/app.mustache`\' \
 #
 all:
+	cat src/letsmap.js \
+	    src/views/* \
+	    > public/js/letsmap.js
 	java -jar ../tools/closure-compiler/compiler.jar \
-	    --compilation_level WHITESPACE_ONLY \
+	    --compilation_level SIMPLE_OPTIMIZATIONS \
 	    --process_jquery_primitives \
 	    --summary_detail_level 3 \
 	    --warning_level VERBOSE \

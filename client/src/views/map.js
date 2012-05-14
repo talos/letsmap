@@ -28,15 +28,34 @@
  */
 var LETS_MAP_BASE_LAYER_DEFAULT = 'toner';
 
-var coords = [[40.77, -73.98], [40.8, -74]];
-
-var icon = new LetsMap.Icon();
-
-var MARKERS = _.map(coords, function (coord) {
-    return new L.Marker(new L.LatLng(coord[0], coord[1]), {
-        icon: icon
-    });
-});
+var tempData = [{
+    "address": "315 Bowery New York, NY 10003",
+    "lat": "40.72518590",
+    "lng": "-73.99213060",
+    "range": [19731200, 20061015],
+    "title": "CBGB"
+}, {
+    "address": "1941 Broadway, New York, NY",
+    "lat": "40.77372690",
+    "lng": "-73.98267240",
+    "range": [19660911, null],
+    "title": "Lincoln Center's Alice Tully Hall opens"
+}, {
+    "address": "67-01 110th Street, Forest Hills, New York",
+    "lat": "40.72947220",
+    "lng": "-73.8456710",
+    "range": [19740000, 19740000],
+    "title": "Formation of Ramones",
+    "description": "They met in high school in Forest Hills"
+}, {
+    "address": "673 Broadway New York, NY 10012",
+    "lat": "40.72750920",
+    "lng": "-73.99503009999999",
+    "range": [19700000, 19730803],
+    "title": "Mercer Arts Center, Early Punk Shows",
+    "description": "Building collapsed in 1973",
+    "sources": ["http://en.wikipedia.org/wiki/Mercer_Arts_Center"]
+}];
 
 /**
  * @param {Object} options
@@ -60,6 +79,7 @@ LetsMap.MapView = Backbone.View.extend({
         this.slider = new LetsMap.SliderView();
         this.slider.$el.appendTo(this.$el);
         this.slider.render();
+        this.slider.on('drag', _.myBind(this.render, this));
         this.slider.on('endDrag', _.myBind(this.render, this));
 
         /** @type {jQueryObject} **/
@@ -69,6 +89,11 @@ LetsMap.MapView = Backbone.View.extend({
 
         /** @type {?L.Map} **/
         this._map = null;
+
+        /** @type {Array.<LetsMap.Marker>} */
+        this.markers = _.map(tempData, function (data) {
+            return new LetsMap.Marker(data);
+        });
     },
 
     /**
@@ -83,13 +108,16 @@ LetsMap.MapView = Backbone.View.extend({
             });
             this._map.addLayer(this.base);
 
-            _.each(MARKERS, _.myBind(function (marker) {
-                this._map.addLayer(marker);
-            }, this));
         }
+        var curDate = new Date(this.slider.getValue(), 1, 1);
 
-        // update layers based off slider value.
-        //window.console.log(this.slider.getValue());
+        _.each(this.markers, _.myBind(function (marker) {
+            if (marker.isCurrent(curDate)) {
+                this._map.addLayer(marker);
+            } else {
+                this._map.removeLayer(marker);
+            }
+        }, this));
 
         return this;
     }
