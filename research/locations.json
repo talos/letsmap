@@ -110,274 +110,457 @@
         "http://www.nytimes.com/2010/09/07/nyregion/07sedgwick.html"
     ]
 },{
+    "address": "1790 Broadway New York, NY",
+    "range": [19790906, 19930602],
+    "title": "Sugar Hill Records founded",
+    "sources": [
+        "http://appext9.dos.ny.gov/corp_public/CORPSEARCH.ENTITY_INFORMATION?p_nameid=661600&p_corpid=579675&p_entity_name=sugar%20hill&p_name_type=%25&p_search_type=BEGINS&p_srch_results_page=3"
+    ]
+},{
+    "address": "1508 Macombs Rd, Bronx, NY",
+    "range": [1980000, 19820000],
+    "title": "Ecstasy Garage Disco",
+    "description": "home of the Cold Crush brothers",
+    "sources": [
+        "http://www.egotripland.com/tag/ecstasy-garage/",
+        "http://mapping.cit.cornell.edu/hiphop/map/view_data_point.cfm?data_point_id=503&show=picture&",
+        "http://www.oldschoolhiphop.com/interviews/arthurarmstrong.htm",
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "University Ave Bronx, NY",
+    "range": [19790000, 19800000],
+    "title": "Galaxy 500",
+    "sources": [
+        "http://www.oldschoolhiphop.com/interviews/arthurarmstrong.htm"
+    ]
+},{
     "address": "",
-    "range": [, ],
+    "range": [19770000, null],
+    "title": "3rd Avenue Ballroom",
+    "sources": [
+        "http://mapping.cit.cornell.edu/hiphop/map/view_data_point.cfm?data_point_id=986",
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "3510 White plains Rd Bronx, NY",
+    "range": [19760000, 19820000],
+    "title": "T-Connection",
+    "sources": [
+        "http://deephousepage.com/forums/showthread.php?t=191842",
+        "http://mapping.cit.cornell.edu/hiphop/map/view_data_point.cfm?data_point_id=984",
+        "http://missrosen.wordpress.com/2010/01/11/joe-conzo-born-in-the-bronx-2/",
+        "http://www.thafoundation.com/troylist2.htm",
+        "http://www.oldschoolhiphop.com/interviews/arthurarmstrong.htm"
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "Brooklyn Armory",
+    "sources": [
+        "http://deephousepage.com/forums/showthread.php?t=191842"
+    ]
+},{
+    "address": "526 W 26 St New York, NY",
+    "range": [19790330, 19850800],
+    "title": "Fun House",
+    "description": "Disco, also hosted rap battles",
+    "sources": [
+        "http://www.discomusic.com/images/photos/clubs/funhouseplanetpatrol82.jpg",
+        "http://ohhla.com/anonymous/rakim/18letter/remember.rkm.txt"
+    ]
+},{
+    "address": "129 Lenox Ave New York, NY",
+    "range": [19780000, 19850000],
+    "title": "Harlem World",
+    "sources": [
+        "http://mapping.cit.cornell.edu/hiphop/map/view_data_point.cfm?data_point_id=683",
+        "http://www.thafoundation.com/troylist2.htm",
+        "http://www.thafoundation.com/charock.htm"
+    ]
+},{
+    "address": "309 W 125 St New York, NY",
+    "range": [19820000, null],
+    "title": "Randy's Place",
+    "sources": [
+        "http://www.thafoundation.com/easylee.htm",
+        "http://www.oldschoolhiphop.com/interviews/arthurarmstrong.htm",
+        "http://news.google.com/newspapers?nid=2238&dat=19821123&id=ppglAAAAIBAJ&sjid=QvUFAAAAIBAJ&pg=5128,2077962",
+        "http://www.thafoundation.com/tonytone.htm"
+    ]
+},{
+    "address": "2005 Madison Ave New York, NY",
+    "range": [null, null],
+    "title": "I.S. 201",
+    "sources": [
+        "http://www.oldschoolhiphop.com/artists/emcees/boogieboys.htm"
+    ]
+},{
+    "address": "560 Thieriot Ave Bronx, NY",
+    "range": [null, null],
+    "title": "I.S. 131",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "East Tremont Ave and West Farms Sq, Bronx NY",
+    "range": [null, null],
+    "title": "I.S. 167",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "180th Street and Jerome Avenue Bronx, NY",
+    "range": [19750000, null],
+    "title": "Hevalo",
+    "description": "Kool Herc was a hired DJ here",
+    "sources": [
+        "http://www.hiphop-network.com/articles/djarticles/kooldjherc.asp",
+        "http://blogs.villagevoice.com/music/2011/05/kool_herc_new_york_1520_sedgwick_avenue.php"
+    ]
+},{
+    "address": "Jerome Avenue, between Tremont and Burnside Avenues Bronx, NY",
+    "range": [19730000, null],
+    "title": "Twilight Zone",
+    "sources": [
+        "http://www.hiphop-network.com/articles/djarticles/kooldjherc.asp",
+        "http://blogs.villagevoice.com/music/2011/05/kool_herc_new_york_1520_sedgwick_avenue.php"
+    ]
+},{
+    "address": "Mount Eden and Jerome Ave, Bronx, NY",
+    "range": [19770000, null],
+    "title": "Executive Playhouse",
+    "sources": [
+        "http://www.hiphop-network.com/articles/djarticles/kooldjherc.asp",
+        "http://hiphopnews.yuku.com/topic/1044#.T8e_BplYuH8",
+        "http://hiphop101a.blogspot.com/2007/05/one-night-at-executive-playhouse.html"
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "Hilltop",
+    "sources": [
+        "http://www.hiphop-network.com/articles/djarticles/kooldjherc.asp"
+    ]
+},{
+    "address": "170th st. and Grand concourse, Bronx NY",
+    "range": [null, null],
+    "title": "Disco Fever",
+    "sources": [
+        "http://www.hiphop-network.com/articles/djarticles/kooldjherc.asp",
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "East Tremont and Webster ave",
+    "range": [19840000, null],
+    "title": "Disco Fever II",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "",
+    "range": [19750000, 19820000],
+    "title": "Club 371",
+    "sources": [
+        "http://www.hiphop-network.com/articles/djarticles/kooldjherc.asp",
+        "http://www.hiphop-network.com/articles/general/kurtisblowversionofhiphop.asp",
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "174 and Jerome, Bronx NY",
+    "range": [null, null],
+    "title": "Sparkle",
+    "sources": [
+        "http://www.hiphop-network.com/articles/djarticles/kooldjherc.asp"
+    ]
+},{
+    "address": "1619 East 174th st. Bronx river Ave, Bronx NY",
+    "range": [19730000, 19810000],
+    "title": "Bronx River Center",
+    "description": "Zulu home",
+    "sources": [
+        "http://books.google.com/books?id=t0sX905wKAMC&pg=PA37&lpg=PA37&dq=hevalo+jerome+ave&source=bl&ots=5iV5HgbvGH&sig=yipO3RzZXlIwY78wxSHJcqr5ybo&hl=en&sa=X&ei=W5rHT6enHqSg6QH0xOmVDg&ved=0CEQQ6AEwAA#v=onepage&q=hevalo%20jerome%20ave&f=false",
+        "http://ngm.nationalgeographic.com/print/2007/04/hip-hop-planet/mcbride-text",
+        "http://board.oldschoolhiphop.com/viewtopic.php?f=1&t=5137"
+    ]
+},{
+    "address": "163 st Freeman Ave, Bronx NY",
+    "range": [null, null],
+    "title": "The Black Door",
+    "description": "Grandmaster Flash was here",
+    "sources": [
+        "http://books.google.com/books?id=t0sX905wKAMC&pg=PA37&lpg=PA37&dq=hevalo+jerome+ave&source=bl&ots=5iV5HgbvGH&sig=yipO3RzZXlIwY78wxSHJcqr5ybo&hl=en&sa=X&ei=W5rHT6enHqSg6QH0xOmVDg&ved=0CEQQ6AEwAA#v=onepage&q=hevalo%20jerome%20ave&f=false",
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "1665 East 173rd st. Hoe avenue, Bronx NY",
+    "range": [19820000, null],
+    "title": "Boys Club",
+    "description": "Easy A.D. home",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "163rd st. and Prospect ave, Bronx NY",
+    "range": [null, null],
+    "title": "Burger King disco",
+    "description": "as crazy as it sounds Flash did parties there. They would unscrew the tables and chairs at 7:30 p.m. it was time to party",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "176th st. and Webster ave",
+    "range": [null, null],
+    "title": "Burger King disco II",
+    "description": "as crazy as it sounds Flash did parties there. They would unscrew the tables and chairs at 7:30 p.m. it was time to party",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "170th st. and Grand concourse, Bronx NY",
+    "range": [19800000, null],
+    "title": "Christ the King",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "Melville and Morris ave, Bronx, NY",
+    "range": [null, null],
+    "title": "Double 6' club",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "169th st. and Prospect Ave, Bronx, NY",
+    "range": [19800000, null],
+    "title": "Inner City Disco",
+    "description": "L. Brothers home",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "1790 Story Ave, Bronx NY",
+    "range": [null, null],
+    "title": "James Monroe center",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "1025 Morrison Avenue, Bronx NY",
+    "range": [null, null],
+    "title": "J.H.S. 123",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm",
+        "http://schools.nyc.gov/SchoolPortals/08/X123/default.htm"
+    ]
+},{
+    "address": "885 Bolton ave. Bronx, NY",
+    "range": [null, null],
+    "title": "J.H.S. 137",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "Webster ave. and Claremont Bronx,  NY",
+    "range": [null, null],
+    "title": "J.H.S. 147",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "169 3rd. ave. Bronx, NY",
+    "range": [null, null],
+    "title": "J.H.S. 148",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "953 Southern Blvd",
+    "range": [null, null],
+    "title": "Hunts Point Palace",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "981 Southern Blvd",
+    "range": [null, null],
+    "title": "Kelly's Palace",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "St. Pauls and 3rd Ave, Bronx NY",
+    "range": [null, null],
+    "title": "Maxwell Park",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "136 St and Alexander Ave, Bronx NY",
+    "range": [null, null],
+    "title": "Mitchell Gym",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "Boston Rd and 166th St, Bronx NY",
+    "range": [null, null],
+    "title": "Morris H.S.",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "183 St and Webster Ave, Bronx NY",
+    "range": [19810000, null],
+    "title": "P.A.L.",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "1965 Lafayette Avenue, Bronx, NY",
+    "range": [null, null],
+    "title": "Park Lane",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "163 st and Prospect Ave, Bronx, NY",
+    "range": [19860000, null],
+    "title": "Prospect Theater",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "149 St and Grand Concourse, Bronx, NY",
+    "range": [null, null],
+    "title": "Recovery Room",
+    "description": "After hours spot",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "120 E 149th St, Bronx, NY",
+    "range": [19830000, null],
+    "title": "Savoy Manor",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "176 St and Jerome Av, Bronx NY",
+    "range": [null, null],
+    "title": "Skate Fever",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "930 Soundview Ave, Bronx, NY",
+    "range": [19830000, null],
+    "title": "Skate Palace",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "Jennings and Bristow Ave, Bronx, NY",
+    "range": [null, null],
+    "title": "Smoke Stack",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "3813 Boston Rd, Bronx NY",
+    "range": [null, null],
+    "title": "Sound Symposium",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "1680 Seward ave",
+    "range": [null, null],
+    "title": "Sound View Com. Center",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "2008 Webster Avenue, Bronx NY",
+    "range": [null, null],
+    "title": "Your Spot",
+    "sources": [
+        "http://www.thafoundation.com/troylist2.htm"
+    ]
+},{
+    "address": "10989 204th Street, Jamaica NY",
+    "range": [19800000, null],
+    "title": "Two-Fifths Park",
+    "description": "The large stretch of asphalt next to Junior High School 192",
+    "sources": [
+        "http://www.scribd.com/doc/47842688/DJ-Skills-The-essential-guide-to-mixing-scratching"
+    ]
+},{
+    "address": "",
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
     ]
 },{
     "address": "",
-    "range": [, ],
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
     ]
 },{
     "address": "",
-    "range": [, ],
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
     ]
 },{
     "address": "",
-    "range": [, ],
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
     ]
 },{
     "address": "",
-    "range": [, ],
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
     ]
 },{
     "address": "",
-    "range": [, ],
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
     ]
 },{
     "address": "",
-    "range": [, ],
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
     ]
 },{
     "address": "",
-    "range": [, ],
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
     ]
 },{
     "address": "",
-    "range": [, ],
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
     ]
 },{
     "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
-    "title": "",
-    "sources": [
-        ""
-    ]
-},{
-    "address": "",
-    "range": [, ],
+    "range": [null, null],
     "title": "",
     "sources": [
         ""
