@@ -18,7 +18,7 @@
    *
    ***/
 
-/*jslint browser: true, nomen: true*/
+/*jslint browser: true, nomen: true, sub: true, vars: true*/
 /*globals Backbone, $, LetsMap, Mustache, L, _*/
 "use strict";
 
@@ -28,6 +28,7 @@
  */
 var LETS_MAP_BASE_LAYER_DEFAULT = 'toner';
 
+/*
 var tempData = [{
     "address": "315 Bowery New York, NY 10003",
     "lat": "40.72518590",
@@ -56,6 +57,7 @@ var tempData = [{
     "description": "Building collapsed in 1973",
     "sources": ["http://en.wikipedia.org/wiki/Mercer_Arts_Center"]
 }];
+*/
 
 /**
  * @param {Object} options
@@ -91,9 +93,45 @@ LetsMap.MapView = Backbone.View.extend({
         this._map = null;
 
         /** @type {Array.<LetsMap.Marker>} */
-        this.markers = _.map(tempData, function (data) {
-            return new LetsMap.Marker(data);
-        });
+        this.markers = [];
+
+        /** @type {function()} */
+        this.loadMarkers = this.loadMarkers || undefined;
+        this.loadMarkers();
+    },
+
+    /**
+     * Load markers via XHR.
+     *
+     * @this {LetsMap.AppView}
+     */
+    loadMarkers: function () {
+        $.when(
+            $.getJSON('../../research/locations.json'),
+            $.getJSON('../../research/output.json')
+        ).done(_.bind(function (locationsArgs, pointsArgs) {
+            var locations = locationsArgs[0],
+                geocoded = pointsArgs[0];
+            this.markers = _.map(locations, function (l) {
+                // extract lon/lat from points
+                var g = geocoded[l['address']],
+                    latLng;
+                if ($.isArray(g)) {
+                    latLng = g[1];
+                    if ($.isArray(latLng)) {
+                        l['lat'] = latLng[0];
+                        l['lng'] = latLng[1];
+                    }
+                }
+                // TODO handling missing lat/lng
+                if (!l['lat'] || !l['lng']) {
+                    l['lat'] = -1;
+                    l['lng'] = -1;
+                }
+                return new LetsMap.Marker(l);
+            });
+            this.render();
+        }, this));
     },
 
     /**

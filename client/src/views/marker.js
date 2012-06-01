@@ -30,6 +30,7 @@
 LetsMap.Marker = L.Marker.extend({
 
     /**
+     * @param {Object} data
      * @this {L.Marker}
      */
     initialize: function (data) {
@@ -69,6 +70,10 @@ LetsMap.Marker = L.Marker.extend({
      * @this {LetsMap.Marker}
      */
     isCurrent: function (againstDate) {
+        // fail out if there's ambiguity
+        if (this._minDate === null || this._maxDate === null) {
+            return false;
+        }
         /** @type {boolean} */
         var result = true;
         if (this._minDate) {
