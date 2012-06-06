@@ -16,7 +16,7 @@ SELECT AddGeometryColumn(
 );
 
 CREATE INDEX lowres_geom ON lowres USING GIST ( geometry );
-CREATE INDEX lowres_res ON lowres ( resolution );
+CREATE INDEX lowres_res_year ON lowres ( resolution, year );
 
 \set minx -73.7003786669091
 \set rangex -.3399695202433
