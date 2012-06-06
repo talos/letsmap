@@ -19,7 +19,7 @@
    ***/
 
 /*jslint browser: true, nomen: true, sub: true, vars: true*/
-/*globals Backbone, $, LetsMap, Mustache, L, _*/
+/*globals Backbone, $, LetsMap, Mustache, L, _, HeatCanvas*/
 "use strict";
 
 /**
@@ -77,6 +77,16 @@ LetsMap.MapView = Backbone.View.extend({
         /** @type {L.StamenTileLayer} */
         this.base = new L.StamenTileLayer(LETS_MAP_BASE_LAYER_DEFAULT);
 
+        /** @type {Object.<number, L.TileLayer>} */
+        this.heatLayers = {};
+        var MIN_HEAT = 1966,
+            MAX_HEAT = 2008,
+            year = MIN_HEAT;
+        while (year <= MAX_HEAT) {
+            this.heatLayers[year] = new L.TileLayer('http://localhost:7001/tile/' + year + '/{z}/{x}/{y}.png');
+            year += 1;
+        }
+
         /** @type {LetsMap.SliderView} */
         this.slider = new LetsMap.SliderView();
         this.slider.$el.appendTo(this.$el);
@@ -98,6 +108,9 @@ LetsMap.MapView = Backbone.View.extend({
         /** @type {function()} */
         this.loadMarkers = this.loadMarkers || undefined;
         this.loadMarkers();
+
+        /** @type {Object} */
+        this.mortgages = {};
     },
 
     /**
@@ -137,6 +150,19 @@ LetsMap.MapView = Backbone.View.extend({
     /**
      * @this {LetsMap.AppView}
      */
+    changeHeatLayer: _.debounce(function (curYear) {
+        if (this.curYear !== curYear) {
+            if (this.curYear) {
+                this._map.removeLayer(this.heatLayers[this.curYear]);
+            }
+            this._map.addLayer(this.heatLayers[curYear]);
+            this.curYear = curYear;
+        }
+    }, 1000),
+
+    /**
+     * @this {LetsMap.AppView}
+     */
     render: function () {
         // initial setup
         if (!this._map) {
@@ -145,9 +171,11 @@ LetsMap.MapView = Backbone.View.extend({
                 zoom: 12
             });
             this._map.addLayer(this.base);
-
         }
-        var curDate = new Date(this.slider.getValue(), 1, 1);
+        var curDate = new Date(this.slider.getValue(), 1, 1),
+            curYear = curDate.getFullYear();
+
+        this.changeHeatLayer(curYear);
 
         _.each(this.markers, _.myBind(function (marker) {
             if (marker.isCurrent(curDate)) {
