@@ -19,7 +19,10 @@ L.Map = function(id, options){};
   * @param {L.Layer} layer
   */
 L.Map.prototype.addLayer = function(layer){};
-L.Map.prototype.removeLayer = function(){};
+/**
+  * @param {L.Layer} layer
+  */
+L.Map.prototype.removeLayer = function(layer){};
 L.Map.prototype.setView = function(a, b){};
 
 /** @constructor */
