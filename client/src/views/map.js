@@ -77,15 +77,8 @@ LetsMap.MapView = Backbone.View.extend({
         /** @type {L.StamenTileLayer} */
         this.base = new L.StamenTileLayer(LETS_MAP_BASE_LAYER_DEFAULT);
 
-        /** @type {Object.<number, L.TileLayer>} */
-        this.heatLayers = {};
-        var MIN_HEAT = 1966,
-            MAX_HEAT = 2008,
-            year = MIN_HEAT;
-        while (year <= MAX_HEAT) {
-            this.heatLayers[year] = new L.TileLayer('http://localhost:7001/tile/' + year + '/{z}/{x}/{y}.png');
-            year += 1;
-        }
+        /** @type {L.StamenTileLayer} */
+        this.heatLayer = new L.AnimatedTileLayer('http://localhost:7001/tile/{z}/{x}/{y}');
 
         /** @type {LetsMap.SliderView} */
         this.slider = new LetsMap.SliderView();
@@ -150,15 +143,15 @@ LetsMap.MapView = Backbone.View.extend({
     /**
      * @this {LetsMap.AppView}
      */
-    changeHeatLayer: _.debounce(function (curYear) {
+    changeHeatLayer: function (curYear) {
         if (this.curYear !== curYear) {
             if (this.curYear) {
-                this._map.removeLayer(this.heatLayers[this.curYear]);
+                // TODO: shuffle CSS
+                this.heatLayer.goToFrame(curYear - 1966);
             }
-            this._map.addLayer(this.heatLayers[curYear]);
             this.curYear = curYear;
         }
-    }, 1000),
+    },
 
     /**
      * @this {LetsMap.AppView}
@@ -171,6 +164,7 @@ LetsMap.MapView = Backbone.View.extend({
                 zoom: 12
             });
             this._map.addLayer(this.base);
+            this._map.addLayer(this.heatLayer);
         }
         var curDate = new Date(this.slider.getValue(), 1, 1),
             curYear = curDate.getFullYear();

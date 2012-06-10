@@ -1,5 +1,8 @@
 # import threading, Queue
+import math
 import pyheat
+import cStringIO as StringIO
+import PIL
 
 # Simple batch job processor
 # class Batcher(threading.Thread):
@@ -34,18 +37,30 @@ import pyheat
 
 
 class TileMaster():
-    def process(self, tile_points, zoom, tx, ty):
+    def process(self, points_by_radius_frames, zoom, tx, ty):
+        """
+        points_by_radius_frames are the points in each frame that we want
+        in the outpu image.
+        """
         #radius = 1.5**zoom
-        radius = 10
-        alpha = 1.0 - (zoom / 20.0)
+        #alpha = 1.0 - (zoom / 20.0)
+        alpha = 0.7
 
-        tile = pyheat.HeatTile(zoom, tx, ty)
-        (lat_min, lat_max, lon_min, lon_max) = tile.get_ll_bounds(padding=radius+1)
-        # tile_points = [point for point in points if point[0] > lat_min and
-        #                                             point[0] < lat_max and
-        #                                             point[1] > lon_min and
-        #                                             point[1] < lon_max]
+        # TODO this should be from elsewhere
+        TILE_SIZE = 256
 
-        tile.add_points(tile_points, radius=radius)
-        tile.transform_color(alpha=alpha)
-        return tile.get_image()
+        img = PIL.Image.new('L', (len(points_by_radius_frames) * TILE_SIZE, TILE_SIZE))
+        for i, points_by_radius in enumerate(points_by_radius_frames):
+            tile = pyheat.HeatTile(zoom, tx, ty)
+            for radius, points in points_by_radius.iteritems():
+                # adjust radius based off of zoom
+                # radius is good for zoom 13
+                r = math.log(radius + 0.5, 1.1) * (1.5 ** (zoom - 13))
+
+                tile.add_points(points, radius=r)
+            tile.transform_color(alpha=alpha)
+            img.paste(tile.get_pil_image(), (i * tile.width, 0))
+
+        f = StringIO.StringIO()
+        img.save(f, 'jpeg', quality=20)
+        return f

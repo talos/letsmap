@@ -1,8 +1,8 @@
 import psycopg2
 import logging
-from pyheat import HeatTile
 import time
 
+from pyheat import HeatTile
 from heatlayer import TileMaster
 
 from brubeck.request_handling import Brubeck, WebMessageHandler
@@ -15,45 +15,64 @@ tilemaster = TileMaster()
 
 class TileHandler(WebMessageHandler):
 
-    def get(self, year, zoom, tx, ty):
+    def get(self, zoom, tx, ty):
         try:
-            year = int(year)
             zoom = int(zoom)
             tx = int(tx)
             ty = int(ty)
         except ValueError:
             self.set_status(400)
             return self.render()
-        year = int(year)
-        # 9: 32
-        # 10: 64
-        # 11: 128
-        # 12: 256
-        # 13: 512
-        # 14: 1024?
-        # 15: 2056+ (real)
-        resolution = 64
-        (min_y, max_y, min_x, max_x) = HeatTile(zoom, tx, ty).get_ll_bounds()
+
+        MIN_YEAR = 1966
+        MAX_YEAR = 2008
+        # 9: 
+        # 10:
+        # 11: 
+        # 12: 8
+        # 13: 
+        # 14: 
+        # 15: 
+        resolution = 2 ** (zoom - 6)
+        resolution = 2056 if resolution > 1024 else resolution
+        (min_y, max_y, min_x, max_x) = HeatTile(zoom, tx, ty).get_ll_bounds(
+            padding=5 * (3 ** (zoom - 13)))
         cursor = self.db_conn.cursor()
 
         # TODO cache and draw from a larger queryset, we're gonna bombard our db
         before_query = time.time()
         cursor.execute('SELECT \
                            ST_Y(geometry), \
-                           ST_X(geometry) \
+                           ST_X(geometry), \
+                           n, \
+                           year \
                            FROM lowres \
-                       WHERE resolution = %s AND year = %s AND \
+                       WHERE year BETWEEN %s AND %s AND resolution = %s AND \
                            ST_WITHIN(geometry, ST_MakeEnvelope(%s, %s, %s, %s, 4326))' %
-                       ( resolution, year, min_x, min_y, max_x, max_y))
+                       ( MIN_YEAR, MAX_YEAR, resolution, min_x, min_y, max_x, max_y))
         after_query = time.time()
         logging.warn("Query execution time: %s" % (after_query - before_query))
 
         before_tile = time.time()
-        tile_image = tilemaster.process(cursor, zoom, tx, ty)
+
+        # create object keyed by year
+        points_by_radius_years = {}
+        for p in cursor:
+            (x, y, n, year) = p
+            if not year in points_by_radius_years:
+                points_by_radius_years[year] = {}
+            if not n in points_by_radius_years[year]:
+                points_by_radius_years[year][n] = []
+            points_by_radius_years[year][n].append((x, y))
+
+        # tilemaster takes an array of data points, not the object
+        # TODO: actually order this correctly
+        tile_image = tilemaster.process(points_by_radius_years.values(), zoom, tx, ty)
         after_tile = time.time()
         logging.warn("Tile construction time: %s" % (after_tile - before_tile))
 
-        self.headers['Content-Type'] = 'image/png'
+        #self.headers['Content-Type'] = 'image/png'
+        self.headers['Content-Type'] = 'image/jpeg'
         self.set_body(tile_image.getvalue())
         return self.render()
 
@@ -61,7 +80,7 @@ config = {
     'msg_conn': Mongrel2Connection(RECV_SPEC, SEND_SPEC),
     'handler_tuples': [
         #(r'^/points$', PointsHandler),
-        (r'^/tile/(\d+)/(\d+)/([\d\.]+)/([\d\.]+)\.png?', TileHandler)
+        (r'^/tile/(\d+)/([\d\.]+)/([\d\.]+)$', TileHandler)
     ],
     'db_conn': psycopg2.connect(database=DATABASE_NAME)
 }

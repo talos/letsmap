@@ -4,6 +4,7 @@
 all:
 	cat src/letsmap.js \
 	    src/views/* \
+	    src/AnimatedTileLayer.js \
 	    > public/js/letsmap.js
 	java -jar ../tools/closure-compiler/compiler.jar \
 	    --compilation_level SIMPLE_OPTIMIZATIONS \
