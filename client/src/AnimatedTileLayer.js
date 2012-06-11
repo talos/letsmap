@@ -8,65 +8,96 @@
     /**
      * A tile layer that uses CSS sprites to make for smooth animations.
      */
-    L.AnimatedTileLayer = L.TileLayer.extend({
+    L.TileLayer.Animated = L.TileLayer.Canvas.extend({
         options: {
-            async: false
+            async: false,
+            initialFrame: 0
         },
 
-        _createTileProto: function () {
-            var div = this._tileDiv = L.DomUtil.create('div', 'leaflet-tile'),
-                tileSize = this.options.tileSize;
-            div.style.width = tileSize + 'px';
-            div.style.height = tileSize + 'px';
-        },
-
-        _createTile: function () {
-            var tileDiv = this._tileDiv.cloneNode(false);
-            tileDiv.onselectstart = tileDiv.onmousemove = L.Util.falseFn;
-            return tileDiv;
-        },
-
-        _loadTile: function (tile, tilePoint, zoom) {
-            // TODO this isn't good form, but it's how leaflet does it already!
-            tile._layer = this;
-            tile._url = this.getTileUrl(tilePoint, zoom);
-            tile.style.backgroundImage = 'url(' + tile._url + ')';
-
-            if (this.options.async) {
-                throw new Error("Async animation not yet implemented.");
+        initialize: function (url, numFrames, options) {
+            L.TileLayer.prototype.initialize.call(this, url, options);
+            if (numFrames) {
+                this._numFrames = numFrames;
             } else {
-                this.tileDrawn(tile);
+                throw new Error("You must specify numFrames");
             }
+            this._curFrame = this.options.initialFrame;
+            this._images = {};
+            var bufferCanvas = L.DomUtil.create('canvas', 'buffer');
+            bufferCanvas.style.display = 'none';
+            bufferCanvas.width = this.options.tileSize;
+            bufferCanvas.height = this.options.tileSize;
+            this._bufferCtx = bufferCanvas.getContext('2d');
         },
 
-        tileDrawn: function (tile) {
-            this._tileOnLoad.call(tile);
-        },
+        drawTile: function (tile, tilePoint, zoom) {
+            var url = this.getTileUrl(tilePoint, zoom),
+                numFrames = this._numFrames,
+                bufferCtx = this._bufferCtx,
+                curFrame = this._curFrame,
 
-        /**
-         * Call fn for each tile, with fn.call(layer, tile).
-         *
-         * @param {Function(tile)}
-         */
-        _eachTile: function (fn) {
-            var i;
-            for (i in this._tiles) {
-                if (this._tiles.hasOwnProperty(i)) {
-                    fn.call(this, this._tiles[i]);
-                }
+                // called with 'this' as img
+                compositeImage = function () {
+                    var tileCtx = tile.getContext('2d'),
+                        img = this,
+                        contents,
+                        data,
+                        i,
+                        len;
+
+                    // draw the mask
+                    // TODO vary based off of selected frame
+                    if (img.height === 0 && img.width === 0) {
+                        //blank
+                        return;
+                    } else {
+                        bufferCtx.drawImage(img, -tile.width * curFrame, 0,
+                                            tile.width * numFrames, tile.height);
+
+                        contents = bufferCtx.getImageData(0, 0, tile.width, tile.height);
+                        data = contents.data; // cachety cache
+                        len = data.length;
+
+                        // set the alpha channel from red
+                        i = 0;
+                        //var before = new Date();
+                        while (i < len) {
+                            data[i + 3] = data[i];
+                            //data[i] = 255;
+                            i += 4;
+                        }
+                        tileCtx.clearRect(0, 0, tile.width, tile.height);
+                        tileCtx.putImageData(contents, 0, 0);
+                        tileCtx.globalCompositeOperation = 'source-in';
+                        tileCtx.fillStyle = 'red';
+                        tileCtx.fillRect(0, 0, tile.width, tile.height);
+
+                        //console.log(new Date() - before);
+                        //console.log(data.constructor);
+                    }
+                },
+                img;
+
+            if (this._images.hasOwnProperty(url)) {
+                img = this._images[url];
+                compositeImage.call(img);
+            } else {
+                img = L.DomUtil.create('img', 'animation_preload');
+                img.crossOrigin = '';
+                img.src = url;
+                img.onload = compositeImage;
+                this._images[url] = img;
             }
         },
 
         /**
          * Change our view for all tiles to a particular frame.
-         * This sets the background position to offset frameNumber * tileSize.
          *
          * @param {Number} frameNumber the frame to go to.
          */
         goToFrame: function (frameNumber) {
-            this._eachTile(function (tile) {
-                tile.style.backgroundPosition = (this.options.tileSize * frameNumber) + 'px 0px';
-            });
+            this._curFrame = frameNumber;
+            this.redraw();
         }
     });
 }());

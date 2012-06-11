@@ -26,7 +26,7 @@
  * @constant {Object}
  */
 var SLIDER_VIEW_DEFAULTS = {
-    max: 2012,
+    max: 2008,
     min: 1966,
 
     // whether to round to whole values.
@@ -75,6 +75,13 @@ LetsMap.SliderView = Backbone.View.extend({
 
         /** @type {function(): number} */
         this.getValue = this.getValue || undefined;
+
+        // keep the marker's text in line with current value
+        this.on('drag', function () {
+            this.$marker.text(this.getValue());
+        }, this);
+
+        this.$marker.text(this.getValue());
     },
 
     /**
@@ -99,11 +106,18 @@ LetsMap.SliderView = Backbone.View.extend({
      * @this {LetsMap.SliderView}
      */
     drag: _.debounce(function (evt) {
+        var shadowPaddingOffset = 20;
+
         /** @type {number} **/
-        var x = evt.pageX - this.$el.offset().left;
+        var x = (evt.pageX + shadowPaddingOffset) - this.$el.offset().left;
 
         /** @type {number} **/
         var width = this.$el.outerWidth();
+
+        /** @type {number} **/
+        var markerWidth = this.$marker.outerWidth();
+
+        width = width - markerWidth;
 
         /** @type {number} **/
         var range = this.options.max - this.options.min;
