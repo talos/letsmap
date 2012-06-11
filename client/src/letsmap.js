@@ -41,7 +41,18 @@ LetsMap.Util.parseDate = function (num) {
         return null;
     }
     var str = String(num),
-        d = new Date(str.slice(0, 4), str.slice(4, 6), str.slice(6, 8));
+        year = Number(str.slice(0, 4)),
+        month = Number(str.slice(4, 6)),
+        day = Number(str.slice(6, 8)),
+        d;
+
+    // ambiguous is 0, JS expects -1 otherwise
+    month = month === 0 ? 0 : month - 1;
+
+    // ambiguous is 0, no expectation of -1
+    day = day === 0 ? 1 : day;
+
+    d = new Date(year, month, day);
     if (String(d) === 'Invalid Date') {
         throw num + " is not a date.";
     } else {

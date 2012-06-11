@@ -18,7 +18,7 @@
    *
    ***/
 
-/*jslint browser: true, nomen: true*/
+/*jslint browser: true, nomen: true, vars: true*/
 /*globals Backbone, $, LetsMap, Mustache, L, _*/
 "use strict";
 
@@ -44,7 +44,21 @@ LetsMap.Marker = L.Marker.extend({
         this._minDate = LetsMap.Util.parseDate(data.range[0]);
 
         /** @type {Date} */
-        this._maxDate = LetsMap.Util.parseDate(data.range[1]);
+        this._maxDate = undefined;
+        var dateNumber = data.range[1];
+        if (dateNumber === -1) {
+            var d = new Date();
+            this._maxDate = LetsMap.Util.parseDate(
+                String(d.getFullYear()) +
+                    String('0' + d.getMonth()).slice(-2) +
+                    String('0' + d.getDay()).slice(-2)
+            );
+        } else if (dateNumber === null) {
+            // maxDate is null => single year
+            this._maxDate = this._minDate;
+        } else {
+            this._maxDate = LetsMap.Util.parseDate(dateNumber);
+        }
 
         /** @type {string} */
         this._title = data.title;
@@ -71,25 +85,33 @@ LetsMap.Marker = L.Marker.extend({
     },
 
     /**
-     * Is this marker contemporary with the passed date?
-     * @param {Date} againstDate
+     * Does this marker intersect with the passed dates?
+     *
+     * @param {Date} begin
+     * @param {Date} end
      * @return {boolean}
      * @this {LetsMap.Marker}
      */
-    isCurrent: function (againstDate) {
+    isCurrent: function (begin, end) {
         // fail out if there's ambiguity
         if (this._minDate === null || this._maxDate === null) {
             return false;
         }
+
         /** @type {boolean} */
-        var result = true;
-        if (this._minDate) {
-            result = result && this._minDate <= againstDate;
+        // min date is in span
+        if (this._minDate >= begin && this._minDate <= end) {
+            return true;
         }
-        if (this._maxDate) {
-            result = result && againstDate <= this._maxDate;
+        // max date is in span
+        if (this._maxDate >= begin && this._maxDate <= end) {
+            return true;
         }
-        return result;
+        // both exceed span
+        if (this._minDate <= begin && this._maxDate >= end) {
+            return true;
+        }
+        return false;
     }
 });
 

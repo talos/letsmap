@@ -89,6 +89,8 @@ LetsMap.MapView = Backbone.View.extend({
         ).done(_.bind(function (locationsArgs, pointsArgs) {
             var locations = locationsArgs[0],
                 geocoded = pointsArgs[0];
+            window.markerCount = 0;
+            window.badMarkerCount = 0;
             this.markers = _.map(locations, function (l) {
                 // extract lon/lat from points
                 var g = geocoded[l['address']],
@@ -106,6 +108,9 @@ LetsMap.MapView = Backbone.View.extend({
                 if (!l['lat'] || !l['lng']) {
                     l['lat'] = -1;
                     l['lng'] = -1;
+                    window.badMarkerCount += 1;
+                } else {
+                    window.markerCount += 1;
                 }
                 l['magic'] = LetsMap.Magic8Ball();
 
@@ -149,13 +154,14 @@ LetsMap.MapView = Backbone.View.extend({
             this._map.addLayer(this.base);
             this._map.addLayer(this.heatLayer);
         }
-        var curDate = new Date(this.slider.getValue(), 1, 1),
-            curYear = curDate.getFullYear();
+        var curYear = this.slider.getValue(),
+            begin = new Date(curYear, 0, 1),
+            end = new Date(curYear, 11, 31);
 
         this.changeHeatLayer(curYear);
 
         _.each(this.markers, _.myBind(function (marker) {
-            if (marker.isCurrent(curDate)) {
+            if (marker.isCurrent(begin, end)) {
                 this._map.addLayer(marker);
             } else {
                 this._map.removeLayer(marker);
