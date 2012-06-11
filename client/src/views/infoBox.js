@@ -19,33 +19,27 @@
    ***/
 
 /*jslint browser: true, nomen: true*/
-/*globals Backbone, $, LetsMap, Mustache, L, _*/
+/*globals Backbone, $, LetsMap, Mustache, _*/
 "use strict";
 
-/**
- * @constructor
- * @extends L.Icon
- */
-LetsMap.Icon = L.DivIcon.extend({
-    options: {
-        iconUrl: null,
-        shadowUrl: null,
-        //iconUrl: 'images/marker.png',
-        //shadowUrl: 'images/marker-shadow.png',
-        //iconSize: new L.Point(38, 95),
-        //shadowSize: new L.Point(68, 95),
-        popupAnchor: new L.Point(0, -50),
-        iconAnchor: new L.Point(36, 72),
-        className: 'venue-marker'
+LetsMap.InfoBoxView = Backbone.View.extend({
+    id: 'infoBox',
+    tagName: 'div',
+
+    tmpl: $('#infoBoxTemplate'),
+
+    /**
+     * @this {LetsMap.InfoBoxView}
+     */
+    initialize: function (options) {
     },
 
     /**
-     * Override createIcon to set text.
+     * @this {LetsMap.InfoBoxView}
      */
-    createIcon: function () {
-        // call parent method explicitly
-        var div = L.DivIcon.prototype.createIcon.call(this);
-        div.innerHTML = '&#9834;';
-        return div;
+    render: function () {
+        this.$el.html(Mustache.render(this.tmpl.html(), {}));
+        return this;
     }
+
 });

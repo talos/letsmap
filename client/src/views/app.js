@@ -43,6 +43,8 @@ LetsMap.AppView = Backbone.View.extend({
         /** @type {LetsMap.MapView} */
         this.map = new LetsMap.MapView({});
         this.map.$el.appendTo(this.$el);
+        this.infoBox = new LetsMap.InfoBoxView({});
+        this.infoBox.$el.appendTo(this.$el);
     },
 
     /**
@@ -50,6 +52,7 @@ LetsMap.AppView = Backbone.View.extend({
      */
     render: function () {
         this.map.render();
+        this.infoBox.render();
         return this;
     }
 });

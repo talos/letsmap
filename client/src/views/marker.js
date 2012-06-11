@@ -29,6 +29,8 @@
  */
 LetsMap.Marker = L.Marker.extend({
 
+    template: $('#markerTemplate'),
+
     /**
      * @param {Object} data
      * @this {L.Marker}
@@ -61,6 +63,11 @@ LetsMap.Marker = L.Marker.extend({
 
         /** @type {function(Date): boolean} */
         this.isCurrent = this.isCurrent || undefined;
+
+        // bind a popup
+        this.bindPopup(Mustache.render(this.template.html(), data), {
+            closeButton: false
+        });
     },
 
     /**

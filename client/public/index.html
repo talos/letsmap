@@ -4,6 +4,26 @@
         <title>Let's map!</title>
         <link rel="stylesheet" href="css/leaflet.css" />
         <link rel="stylesheet" href="css/letsmap.css" />
+
+        <script type="text/html" id="infoBoxTemplate">
+            <div>
+                &hellip;Let&#146;s map!
+            </div>
+        </script>
+
+        <script type="text/html" id="markerTemplate">
+            <div class="title">{{title}}</div>
+            <div class="address">{{address}}</div>
+            <div class="dates">From {{range.0}} to {{range.1}}</div>
+            {{#description}}
+                <div class="description">{{description}}</div>
+            {{/description}}
+            <ul class="sources">
+                {{#sources}}
+                <li class="source"><a href="{{.}}">{{.}}</a></li>
+                {{/sources}}
+            </ul>
+        </script>
     </head>
 
     <body>

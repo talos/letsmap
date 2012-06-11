@@ -26,26 +26,7 @@
  * @constructor
  * @extends L.Icon
  */
-LetsMap.Icon = L.DivIcon.extend({
-    options: {
-        iconUrl: null,
-        shadowUrl: null,
-        //iconUrl: 'images/marker.png',
-        //shadowUrl: 'images/marker-shadow.png',
-        //iconSize: new L.Point(38, 95),
-        //shadowSize: new L.Point(68, 95),
-        popupAnchor: new L.Point(0, -50),
-        iconAnchor: new L.Point(36, 72),
-        className: 'venue-marker'
-    },
+LetsMap.Popup = L.Popup.extend({
 
-    /**
-     * Override createIcon to set text.
-     */
-    createIcon: function () {
-        // call parent method explicitly
-        var div = L.DivIcon.prototype.createIcon.call(this);
-        div.innerHTML = '&#9834;';
-        return div;
-    }
 });
+

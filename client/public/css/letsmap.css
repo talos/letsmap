@@ -3,21 +3,29 @@ body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-#map {
+#app #map {
 }
 
-#map #mapHolder {
+#app #map #mapHolder {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 0;
 }
 
-#map .slider {
+#app #map #mapHolder .venue-marker {
+    font-size: 72px;
+    text-shadow: 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black, 4px 4px 0px red, 6px 6px 0px black, 6px 4px 0px black, 4px 6px 0px black;
+    font-weight: 500;
+    font-family: serif;
+    color: white;
+}
+
+#app #map .slider {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     z-index: 100;
-    left: 10%;
+    left: 100px;
     right: 10%;
     height: 20px;
     background: red;
@@ -26,23 +34,49 @@ body {
     -moz-box-shadow: 10px 10px 0px black;
     -webkit-box-shadow: 10px 10px 0px black;
     border: 2px solid black;
+    border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
 }
 
-#map .slider .marker {
+#app #map .slider .marker {
     position: relative;
-    left: 0px;
-    top: -10px;
-    height: 40px;
+    left: -2px;
+    top: -15px;
     cursor: pointer;
     border: 2px solid black;
     background: white;
     z-index: 101;
-    display: inline;
-    padding: 5px;
+    display: inline-block;
+    padding: 12px 5px;
     text-align: center;
     font-weight: bold;
-    box-shadow: 15px 15px 0px black;
-    -o-box-shadow: 15px 15px 0px black;
-    -moz-box-shadow: 15px 15px 0px black;
-    -webkit-box-shadow: 15px 15px 0px black;
+    border-radius: 40px;
+    -o-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+}
+
+#app #infoBox {
+    color: white;
+    font-family: "Brush Script MT", cursive;
+    font-weight: 500;
+    font-size: 72px;
+    position: absolute;
+    text-shadow: 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black, 4px 4px 0px red, 6px 6px 0px black, 6px 4px 0px black, 4px 6px 0px black;
+    bottom: 60px;
+    z-index: 102;
+    margin: 0 1em;
+}
+
+/** Patching leaflet **/
+.leaflet-popup-content-wrapper {
+    box-shadow: none;
+    border: 2px solid black;
+
+}
+
+.leaflet-popup-tip-container {
+    display: none;
 }

@@ -77,11 +77,23 @@ LetsMap.SliderView = Backbone.View.extend({
         this.getValue = this.getValue || undefined;
 
         // keep the marker's text in line with current value
-        this.on('drag', function () {
-            this.$marker.text(this.getValue());
-        }, this);
+        this.on('drag', this.render, this);
 
-        this.$marker.text(this.getValue());
+        /** @type {function(): number} */
+        this.initialLeftOffset = this.initialLeftOffset || undefined;
+
+        /** @type {number} */
+        this._initialLeftOffset = null;
+    },
+
+    /**
+     * @this {LetsMap.SliderView}
+     */
+    initialLeftOffset: function () {
+        if (this._initialLeftOffset === null) {
+            this._initialLeftOffset = this.$marker.position().left;
+        }
+        return this._initialLeftOffset;
     },
 
     /**
@@ -89,6 +101,7 @@ LetsMap.SliderView = Backbone.View.extend({
      * @this {LetsMap.SliderView}
      */
     render: function () {
+        this.$marker.text(this.getValue());
         return this;
     },
 
@@ -106,10 +119,10 @@ LetsMap.SliderView = Backbone.View.extend({
      * @this {LetsMap.SliderView}
      */
     drag: _.debounce(function (evt) {
-        var shadowPaddingOffset = 20;
 
         /** @type {number} **/
-        var x = (evt.pageX + shadowPaddingOffset) - this.$el.offset().left;
+        var x = (evt.pageX - this.initialLeftOffset()) -
+            this.$el.offset().left;
 
         /** @type {number} **/
         var width = this.$el.outerWidth();
@@ -136,7 +149,7 @@ LetsMap.SliderView = Backbone.View.extend({
         }
 
         this.$marker.css({
-            left: x + 'px'
+            left: (x + this.initialLeftOffset()) + 'px'
         });
 
         this.trigger('drag', this.getValue());
@@ -159,7 +172,7 @@ LetsMap.SliderView = Backbone.View.extend({
      */
     getValue: function () {
         /** @type {number} **/
-        var width = this.$el.outerWidth();
+        var width = this.$el.outerWidth() - this.$marker.outerWidth();
 
         /** @type {number} **/
         var range = this.options.max - this.options.min;
@@ -168,7 +181,7 @@ LetsMap.SliderView = Backbone.View.extend({
         var ratio = range / width;
 
         /** @type {number} **/
-        var left = this.$marker.position().left;
+        var left = this.$marker.position().left - this.initialLeftOffset();
 
         /** @type {number} **/
         var val = this.options.min + (left * ratio);

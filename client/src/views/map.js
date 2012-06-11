@@ -86,7 +86,6 @@ LetsMap.MapView = Backbone.View.extend({
         /** @type {LetsMap.SliderView} */
         this.slider = new LetsMap.SliderView();
         this.slider.$el.appendTo(this.$el);
-        this.slider.render();
         this.slider.on('drag', _.myBind(this.render, this));
         this.slider.on('endDrag', _.myBind(this.render, this));
 
@@ -160,6 +159,8 @@ LetsMap.MapView = Backbone.View.extend({
      * @this {LetsMap.AppView}
      */
     render: function () {
+        this.slider.render();
+
         // initial setup
         if (!this._map) {
             this._map = new L.Map(this.MAP_HOLDER_ID, {
