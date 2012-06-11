@@ -84,6 +84,9 @@ LetsMap.SliderView = Backbone.View.extend({
 
         /** @type {number} */
         this._initialLeftOffset = null;
+
+        /** @type {function(number, number)} */
+        this.addBlip = this.addBlip || undefined;
     },
 
     /**
@@ -94,6 +97,32 @@ LetsMap.SliderView = Backbone.View.extend({
             this._initialLeftOffset = this.$marker.position().left;
         }
         return this._initialLeftOffset;
+    },
+
+    /**
+     * Uses relative percentages to resize properly.
+     *
+     * @this {LetsMap.SliderView}
+     */
+    addBlip: function (startValue, endValue) {
+        if (endValue === null) {
+            // single point
+            endValue = startValue;
+        }
+        var range = this.options.max - this.options.min,
+            leftPerc = (startValue - this.options.min) / range * 100,
+            rightPerc = (endValue - this.options.min) / range * 100;
+        $('<div />')
+            .addClass('blip')
+            .css({
+                position: 'absolute',
+                display: 'inline-block',
+                left: leftPerc + '%',
+                width: (rightPerc - leftPerc) + '%'
+            }).appendTo(this.$el);
+
+
+        //this.$el.append($div);
     },
 
     /**

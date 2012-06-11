@@ -58,6 +58,12 @@ body {
     -webkit-border-radius: 40px;
 }
 
+#app #map .slider .blip {
+    height: 20px;
+    background: black;
+    opacity: 0.2;
+}
+
 #app #infoBox {
     color: white;
     font-family: "Brush Script MT", cursive;

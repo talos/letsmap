@@ -28,37 +28,6 @@
  */
 var LETS_MAP_BASE_LAYER_DEFAULT = 'toner';
 
-/*
-var tempData = [{
-    "address": "315 Bowery New York, NY 10003",
-    "lat": "40.72518590",
-    "lng": "-73.99213060",
-    "range": [19731200, 20061015],
-    "title": "CBGB"
-}, {
-    "address": "1941 Broadway, New York, NY",
-    "lat": "40.77372690",
-    "lng": "-73.98267240",
-    "range": [19660911, null],
-    "title": "Lincoln Center's Alice Tully Hall opens"
-}, {
-    "address": "67-01 110th Street, Forest Hills, New York",
-    "lat": "40.72947220",
-    "lng": "-73.8456710",
-    "range": [19740000, 19740000],
-    "title": "Formation of Ramones",
-    "description": "They met in high school in Forest Hills"
-}, {
-    "address": "673 Broadway New York, NY 10012",
-    "lat": "40.72750920",
-    "lng": "-73.99503009999999",
-    "range": [19700000, 19730803],
-    "title": "Mercer Arts Center, Early Punk Shows",
-    "description": "Building collapsed in 1973",
-    "sources": ["http://en.wikipedia.org/wiki/Mercer_Arts_Center"]
-}];
-*/
-
 /**
  * @param {Object} options
  * @constructor
@@ -123,7 +92,9 @@ LetsMap.MapView = Backbone.View.extend({
             this.markers = _.map(locations, function (l) {
                 // extract lon/lat from points
                 var g = geocoded[l['address']],
-                    latLng;
+                    latLng,
+                    startRange = l['range'][0],
+                    endRange = l['range'][1];
                 if ($.isArray(g)) {
                     latLng = g[1];
                     if ($.isArray(latLng)) {
@@ -136,8 +107,16 @@ LetsMap.MapView = Backbone.View.extend({
                     l['lat'] = -1;
                     l['lng'] = -1;
                 }
+                l['magic'] = LetsMap.Magic8Ball();
+
+                // add blips to slider
+                if (endRange === -1) {
+                    endRange = this.slider.options.max;
+                }
+                this.slider.addBlip(String(startRange).slice(0, 4),
+                                    String(endRange).slice(0, 4));
                 return new LetsMap.Marker(l);
-            });
+            }, this);
             this.render();
         }, this));
     },
