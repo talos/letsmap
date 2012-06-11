@@ -54,8 +54,8 @@ class TileMaster():
             tile = pyheat.HeatTile(zoom, tx, ty)
             for radius, points in points_by_radius.iteritems():
                 # adjust radius based off of zoom
-                # radius is good for zoom 13
-                r = math.log(radius + 0.5, 1.1) * (1.5 ** (zoom - 13))
+                # natural radius is good for zoom 13
+                r = math.log(radius + 0.5, 1.1) * (1.2 ** (zoom - 13))
 
                 tile.add_points(points, radius=r)
             tile.transform_color(alpha=alpha)
