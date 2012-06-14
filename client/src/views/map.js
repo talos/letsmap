@@ -48,7 +48,7 @@ LetsMap.MapView = Backbone.View.extend({
 
         /** @type {L.StamenTileLayer} */
         this.heatLayer = new L.TileLayer.Animated(
-            'http://localhost:7001/tile/{z}/{x}/{y}',
+            '/client/public/tile/{z}/{y}/{x}.jpg',
             2009 - 1966
         );
 
