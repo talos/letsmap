@@ -3,6 +3,29 @@ body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    color: inherit;
+}
+a:hover {
+    color: inherit;
+}
+a:active {
+    outline: 0;
+}
+
+#app #about {
+
+}
+
+#app #about .mask {
+    background: white;
+    opacity: 0.5;
+}
+
 #app #map {
 }
 
@@ -56,6 +79,37 @@ body {
     -o-border-radius: 40px;
     -moz-border-radius: 40px;
     -webkit-border-radius: 40px;
+    box-shadow: 0px 0px 10px red;
+    -o-box-shadow: 0px 0px 10px red;
+    -moz-animation-name: pulse;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes pulse {
+    from { -moz-box-shadow: 0 0 5px red; }
+    50% { -moz-box-shadow: 0 0 30px red; }
+    to { -moz-box-shadow: 0 0 5px red; }
+}
+
+@-webkit-keyframes pulse {
+    from { -webkit-box-shadow: 0 0 5px red; }
+    50% { -webkit-box-shadow: 0 0 30px red; }
+    to { -webkit-box-shadow: 0 0 5px red; }
+}
+
+#app #map .slider .marker:hover {
+    box-shadow: 0px 0px 20px red;
+    -o-box-shadow: 0px 0px 20px red;
+    -moz-box-shadow: 0px 0px 20px red;
+    -webkit-box-shadow: 0px 0px 20px red;
+}
+
+#app #map .slider .marker:hover {
+    color: red;
 }
 
 #app #map .slider .blip {
@@ -66,14 +120,35 @@ body {
 
 #app #infoBox {
     color: white;
+    position: absolute;
+    bottom: 180px;
+    z-index: 102;
+    height: 0px; /* avoid messing with map. */
+    margin: 0 1em;
+}
+
+#app #infoBox .description {
+    color: white;
+    font-weight: bold;
+    text-shadow: -2px 0px 0px black, 2px 0px 0px black, 0px 1px 0px black, 0px -1px 0px black, 2px 2px 2px black;
+    position: relative;
+    top: -8px;
+    left: 100px;
+}
+
+#app #infoBox .description a {
+    color: red;
+}
+
+#app #infoBox .description a:hover {
+    color: white;
+}
+
+#app #infoBox .tagline {
     font-family: "Brush Script MT", cursive;
     font-weight: 500;
     font-size: 72px;
-    position: absolute;
     text-shadow: 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black, 4px 4px 0px red, 6px 6px 0px black, 6px 4px 0px black, 4px 6px 0px black;
-    bottom: 60px;
-    z-index: 102;
-    margin: 0 1em;
 }
 
 /** Patching leaflet **/
