@@ -132,7 +132,6 @@ LetsMap.MapView = Backbone.View.extend({
     changeHeatLayer: function (curYear) {
         if (this.curYear !== curYear) {
             if (this.curYear) {
-                // TODO: shuffle CSS
                 this.heatLayer.goToFrame(curYear - 1966);
             }
             this.curYear = curYear;
@@ -148,11 +147,20 @@ LetsMap.MapView = Backbone.View.extend({
         // initial setup
         if (!this._map) {
             this._map = new L.Map(this.MAP_HOLDER_ID, {
-                center: new L.LatLng(40.77, -73.98),
-                zoom: 12
+                center: new L.LatLng(40.70432661161239, -73.87447357177733),
+                zoom: 11,
+                minZoom: 11,
+                maxZoom: 15
             });
             this._map.addLayer(this.base);
             this._map.addLayer(this.heatLayer);
+            this._map.on('moveend', function (e) {
+                var center = this._map.getCenter();
+                this.trigger('moveend', this._map.getZoom(), center.lat, center.lng);
+            }, this);
+            this._map.on('click', function (e) {
+                this.trigger('click');
+            });
         }
         var curYear = this.slider.getValue(),
             begin = new Date(curYear, 0, 1),
@@ -169,5 +177,10 @@ LetsMap.MapView = Backbone.View.extend({
         }, this));
 
         return this;
+    },
+
+    goTo: function (zoom, lat, lng) {
+        this._map.setZoom(zoom);
+        this._map.panTo(new L.LatLng(lat, lng));
     }
 });

@@ -19,7 +19,7 @@
    ***/
 
 /*jslint browser: true, nomen: true*/
-/*globals Backbone, $, LetsMap, Mustache, _*/
+/*globals Backbone, $, LetsMap, Mustache, _, L*/
 "use strict";
 
 LetsMap.AppRouter = Backbone.Router.extend({
@@ -30,16 +30,27 @@ LetsMap.AppRouter = Backbone.Router.extend({
         // ensure their ordering and use a regular expression.
         var routes = [
             ['', 'map'],
-            ['about', 'about']
+            ['about', 'about'],
+            ['map/:zoom/:lat/:lng', 'map']
         ];
 
         _.each(routes, _.bind(function (route) {
             this.route(route[0], route[1]);
         }, this));
+
+        // LoD violation
+        this.view.map.on('moveend', function (zoom, lat, lng) {
+            this.navigate('map/' + zoom + '/' + lat + '/' + lng, {
+                trigger: true
+            });
+        }, this);
     },
 
-    map: function () {
+    map: function (zoom, lat, lng) {
         this.view.about.$el.hide();
+        if (zoom && lat && lng) {
+            this.view.map.goTo(zoom, lat, lng);
+        }
     },
 
     about: function () {
