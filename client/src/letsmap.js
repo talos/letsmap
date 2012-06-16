@@ -67,8 +67,10 @@ LetsMap.Util.parseDate = function (num) {
 var LETS_MAP_FPS = 100;
 
 $(document).ready(function () {
-    var v = new LetsMap.AppView({});
+    var v = new LetsMap.AppView({}),
+        r = new LetsMap.AppRouter({view: v});
     v.$el.appendTo('body');
     v.render();
-    //Backbone.history.start({ pushState: true });
+
+    Backbone.history.start({ pushState: false });
 });

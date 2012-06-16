@@ -22,41 +22,27 @@
 /*globals Backbone, $, LetsMap, Mustache, _*/
 "use strict";
 
-// Ew, but closure compiler has special ideas about the meaning of 'bind'.
-/**
- * @type{function(function(jQuery.event), Object): function(...[*])}
- */
-_.myBind = function () { return _.bind.apply(this, arguments); };
-
-/**
- * @param {Object} options
- * @constructor
- * @extends Backbone.View
- */
-LetsMap.AppView = Backbone.View.extend({
-    id: 'app',
-
-    /**
-     * @this {LetsMap.AppView}
-     */
+LetsMap.AppRouter = Backbone.Router.extend({
     initialize: function (options) {
-        /** @type {LetsMap.MapView} */
-        this.map = new LetsMap.MapView({});
-        this.map.$el.appendTo(this.$el);
-        this.infoBox = new LetsMap.InfoBoxView({});
-        this.infoBox.$el.appendTo(this.$el);
-        this.about = new LetsMap.AboutView({});
-        this.about.$el.appendTo(this.$el);
+        this.view = options.view;
+
+        // routes are assigned manually from an array in order to
+        // ensure their ordering and use a regular expression.
+        var routes = [
+            ['', 'map'],
+            ['about', 'about']
+        ];
+
+        _.each(routes, _.bind(function (route) {
+            this.route(route[0], route[1]);
+        }, this));
     },
 
-    /**
-     * @this {LetsMap.AppView}
-     */
-    render: function () {
-        this.map.render();
-        this.infoBox.render();
-        this.about.render();
-        return this;
+    map: function () {
+        this.view.about.$el.hide();
+    },
+
+    about: function () {
+        this.view.about.$el.show();
     }
 });
-
