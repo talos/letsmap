@@ -5,10 +5,37 @@
         <link rel="stylesheet" href="css/leaflet.css" />
         <link rel="stylesheet" href="css/letsmap.css" />
 
+        <script type="text/html" id="helpTemplate">
+
+        </script>
+
         <script type="text/html" id="infoBoxTemplate">
-            <div>
+            <div class="tagline">
                 &hellip;Let&#146;s map!
             </div>
+            <div class="description">
+                (drag the slider to change year)
+                <a href="#about">what is this?</a>
+            </div>
+        </script>
+
+        <script type="text/html" id="aboutTemplate">
+            <div class="mask"></div>
+            <div>Let&#145;s map the relationship between investment and cultural production!</div>
+            <h2>What?</h2>
+            <div>Dots (accumulating into splotches) of red are mortgages made for specific properties for the selected year.  If there were a few for a single property, the splotch gets a bit bigger (that&#145;s why the map blushes in the mid-aughts).</div>
+            <div>Drag the circle at the bottom to change which year you&#145;re looking at.</div>
+            <div>Click on the notes to get a little more info about the musical venue or event.</div>
+            <h2>Why?</h2>
+            <div>Mortgages represent concrete investment in a neighborhood.  Also, I happened to have every mortgage in NYC from 1966 to 2008 sitting in a file.</div>
+            <div>The one residue of music that fits well on a map over time are particular live happenings or meetings in general, and venues in particular.  The map leans towards venues.  They&#145;re easier to track down.</div>
+
+            <h2>Why not?</h2>
+            <div>Mortgage investment is not an adequate indicator of economic investment in a neighborhood, but you can probably convince yourself it&#145;s not so bad... and what other data can you get at such precise detail?  On the map is every mortgage on record from the city&#145;s register.</div>
+            <div>Can you imagine what it even means to try and graph cultural production?  Sure you have.  It would look sweet.  Why music and not art?
+            <div>Cultural production can&#145;t be 
+
+
         </script>
 
         <script type="text/html" id="markerTemplate">
