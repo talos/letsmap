@@ -6,6 +6,7 @@ all:
 	cp -r lib public/js/lib
 	cp -r ../research public/research
 	cat src/letsmap.js \
+	    src/routers/* \
 	    src/views/* \
 	    src/AnimatedTileLayer.js \
 	    src/Magic8Ball.js \
