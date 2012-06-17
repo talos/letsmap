@@ -30,7 +30,7 @@
     "address": "485 W Broadway Manhattan, NY 10012",
     "range": [19700000, 19700000],
     "title": "OK Harris gallery",
-    "description": "First suicide show, first billing of 'punk music'",
+    "description": "First Suicide show, first billing of 'punk music'",
     "sources": [
         "http://en.wikipedia.org/wiki/OK_Harris_Gallery",
         "http://en.wikipedia.org/wiki/Suicide_%28band%29#cite_note-1"
@@ -503,60 +503,951 @@
         "http://en.wikipedia.org/wiki/Juice_Crew"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "200 Hudson Street New York, NY 10013",
+    "range": [20081000, -1],
+    "title": "92Y Tribeca",
+    "sources": [
+        "http://en.wikipedia.org/wiki/92nd_Street_Y"
+    ]
+},{
+    "address": "466 Grand Street New York, NY 10002",
+    "range": [19750000, -1],
+    "title": "Abrons Arts Center",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Abrons_Arts_Center"
+    ]
+},{
+    "address": "319 Bowery New York, NY 10003",
+    "range": [19640000, 20090000],
+    "title": "Amato Opera",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Amato_Opera"
+    ]
+},{
+    "address": "253 West 125th Street New York, NY 10027",
+    "range": [19130000, -1],
+    "title": "Apollo Theater",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Apollo_Theater"
+    ]
+},{
+    "address": "95 Stanton Street New York, NY 10002",
+    "range": [19960000, -1],
+    "title": "Arlene's Grocery",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Arlene%27s_Grocery"
+    ]
+},{
+    "address": "376 9th Street Brooklyn, NY 11215",
+    "range": [20020000, -1],
+    "title": "Barbes",
+    "sources": [
+        "http://www.barbesbrooklyn.com/"
+    ]
+},{
+    "address": "237 West 42nd Street New York, NY 10036",
+    "range": [20000000, -1],
+    "title": "B.B. King Blues Club and Grill",
+    "sources": [
+        "http://www.rollingstone.com/music/news/blues-skies-for-b-b-king-20000712"
+    ]
+},{
+    "address": "2124 Broadway New York, NY 10023",
+    "range": [19740000, -1],
+    "title": "Beacon Theatre",
+    "description": "Live music began in 1974; previously a movie theater",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Beacon_Theatre_(New_York_City)"
+    ]
+},{
+    "address": "149 7th Street Brooklyn, NY 11215",
+    "range": [20080000, -1],
+    "title": "The Bell House",
+    "sources": [
+        "http://www.thebellhouseny.com/"
+    ]
+},{
+    "address": "2745 Broadway New York, NY 10025",
+    "range": [19860000, 19970000],
+    "title": "Birdland I",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Birdland_(jazz_club)"
+    ]
+},{
+    "address": "315 West 44th Street New York, NY 10036",
+    "range": [1997000, -1],
+    "title": "Birdland II",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Birdland_(jazz_club)"
+    ]
+},{
+    "address": "147 Bleecker Street New York, NY 10012",
+    "range": [19610000, -1],
+    "title": "The Bitter End",
+    "description": "Important folk rock venue in the 70's; Dylan haunt",
+    "sources": [
+        "http://en.wikipedia.org/wiki/The_bitter_end"
+    ]
+},{
+    "address": "131 West 3rd Street, New York NY 10012",
+    "range": [19810000, -1],
+    "title": "Blue Note Jazz Club",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Blue_Note_Jazz_Club"
+    ]
+},{
+    "address": "6 Delancey Street New York, NY 10002",
+    "range": [19970000, -1],
+    "title": "Bowery Ballroom",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Bowery_Ballroom"
+    ]
+},{
+    "address": "61 Wythe Avenue Brooklyn, NY 11211",
+    "range": [20090707, -1],
+    "title": "Brooklyn Bowl",
+    "sources": [
+        "http://www.brooklynbowl.com/brooklyn-bowl-to-open-july-7-2009/"
+    ]
+},{
+    "address": "35 East 76th Street New York, NY 10075",
+    "range": [19290000, -1],
+    "title": "Cafe Carlyle",
+    "description": "Jazz venue at the Carlyle Hotel; Mick Jagger haunt",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Cafe_Carlyle"
+    ]
+},{
+    "address": "152 Ludlow Street New York, NY 10002",
+    "range": [20050000, -1],
+    "title": "Cake Shop",
+    "sources": [
+        "http://www.nytimes.com/2012/05/31/arts/music/cake-shop-a-club-for-new-music-is-looking-for-financing.html"
+    ]
+},{
+    "address": "881 7th Avenue New York, NY 10019",
+    "range": [18910000, -1],
+    "title": "Carnegie Hall",
+    "description": "Bill Haley was the first rock musician there in 1955",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Carnegie_hall"
+    ]
+},{
+    "address": "155 Varick Street New York, NY 10013",
+    "range": [20060000, -1],
+    "title": "City Winery",
+    "description": "Owned by Knitting Factory founder Michael Dorf",
+    "sources": [
+        "http://www.citywinery.com/newyork/about.html"
+    ]
+},{
+    "address": "30 West 21st Street New York, NY 10010",
+    "range": [19820000, 19900000],
+    "title": "Danceteria II",
+    "description": "New Wave Disco; currently condos",
+    "sources": [
+        "http://www.wnyc.org/shows/soundcheck/2010/oct/19/vanished-venues-danceteria/"
+    ]
+},{
+    "address": "252 West 37th Street New York, NY 10018",
+    "range": [19800000, 19820000],
+    "title": "Danceteria I",
+    "sources": [
+        "http://squattheatre.com/article04m.html"
+    ]
+},{
+    "address": "256 West 23rd Street New York, NY 10011",
+    "range": [19790000, 19810000],
+    "title": "Squat Theatre",
+    "description": "No Wave venue; James Chance, Sun Ra, etc.",
+    "sources": [
+        "http://squattheatre.com/index2.html"
+    ]
+},{
+    "address": "49 South 2nd Street Brooklyn, NY 11226",
+    "range": [20020000, -1],
+    "title": "Death By Audio",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Death_By_Audio"
+    ]
+},{
+    "address": "270 Kent Avenue Brooklyn, NY 11211",
+    "range": [20040000, 20110000],
+    "title": "Monster Island",
+    "sources": [
+        "http://www.villagevoice.com/2011-09-07/music/monster-island-s-last-hurrah/"
+    ]
+},{
+    "address": "231 East 47th Street New York, NY 10017",
+    "range": [19620000, 19680000],
+    "title": "The Factory",
+    "description": "Birthplace of Art",
+    "sources": [
+        "http://en.wikipedia.org/wiki/The_factory"
+    ]
+},{
+    "address": "75 Christopher Street New York, NY 10014",
+    "range": [20040000, -1],
+    "title": "Fat Cat Jazz Club",
+    "sources": [
+        "http://www.allaboutjazz.com/php/article.php?id=14554"
+    ]
+},{
+    "address": "16 Main Street Brooklyn, NY 11201",
+    "range": [20080000, -1],
+    "title": "Galapagos Art Space",
+    "sources": [
+        "http://www.greenbuildingsnyc.com/2008/08/06/galapagos-art-space-opens-green-doors-in-dumbo/"
+    ]
+},{
+    "address": "289 Kent Avenue Brooklyn, NY 11211",
+    "range": [20060000, -1],
+    "title": "Glasslands Gallery",
+    "sources": [
+        "http://www.cmj.com/news/glasslands-gallery-robbed-seeking-community-support/"
+    ]
+},{
+    "address": "1087 Broadway Brooklyn, NY 11221",
+    "range": [20070000, -1],
+    "title": "Goodbye Blue Monday",
+    "sources": [
+        "http://www.brooklynvegan.com/archives/2007/04/goodbye_blue_mo.html"
+    ]
+},{
+    "address": "127 East 23rd Street New York, NY 10010",
+    "range": [20070000, -1],
+    "title": "Gramercy Theater",
+    "description": "Live Nation, corporate venue",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Gramercy_theater"
+    ]
+},{
+    "address": "311 West 34th Street New York, NY 10001",
+    "range": [19970000, -1],
+    "title": "Hammerstein Ballroom",
+    "description": "Renovated in 1997",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Hammerstein_Ballroom"
+    ]
+},{
+    "address": "431 West 16th Street New York, NY 10011",
+    "range": [20070000, -1],
+    "title": "Highline Ballroom",
+    "sources": [
+        "http://www.yamahacommercialaudiosystems.com/news_detail.php?newsID=32"
+    ]
+},{
+    "address": "1650 Broadway New York, NY 10019",
+    "range": [20010000, -1],
+    "title": "Iridium Jazz Club II",
+    "description": "Previously on Upper West Side, Les Paul played there weekly",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Iridium_Jazz_Club"
+    ]
+},{
+    "address": "17 Irving Place New York, NY 10003",
+    "range": [19780000, -1],
+    "title": "Irving Plaza",
+    "description": "New Wave venue in the 80's, renovated by Live Nation in 2007",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Irving_Plaza"
+    ]
+},{
+    "address": "425 Lafayette Street New York, NY 10003",
+    "range": [19980000, -1],
+    "title": "Joe's Pub",
+    "description": "Music venue at the Public Theater",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Joe%27s_Pub"
+    ]
+},{
+    "address": "60 Lincoln Center Plaza New York, NY 10023",
+    "range": [19690000, -1],
+    "title": "Juilliard",
+    "description": "Moved to Lincoln Center in 1969",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Juilliard"
+    ]
+},{
+    "address": "361 Metropolitan Avenue Brooklyn, NY 11211",
+    "range": [20090909, -1],
+    "title": "Knitting Factory Brooklyn",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Knitting_Factory"
+    ]
+},{
+    "address": "74 Leonard Street New York, NY 10013",
+    "range": [19940000, 20090725],
+    "title": "Knitting Factory Tribeca",
+    "sources": [
+        "http://www.nytimes.com/2008/07/10/arts/music/10knit.html"
+    ]
+},{
+    "address": "47 East Houston New York, NY 10012",
+    "range": [19870000, 19940000],
+    "title": "Knitting Factory",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Knitting_Factory"
+    ]
+},{
+    "address": "158 Bleecker Street New York, NY 10012",
+    "range": [20080000, -1],
+    "title": "(Le) Poisson Rouge",
+    "description": "Village Gate formerly at the location",
+    "sources": [
+        "http://www.timeout.com/newyork/music/le-poisson-rouge"
+    ]
+},{
+    "address": "4 Pennsylvania Plaza New York, NY 10001",
+    "range": [19680000, -1],
+    "title": "Madison Square Garden",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Madison_square_garden"
+    ]
+},{
+    "address": "213 Park Avenue South New York, NY 10003",
+    "range": [19650000, 19741200],
+    "title": "Max's Kansas City I",
+    "description": "Bands included: Velvet Underground, David Bowie, New York Dolls, Aerosmith, Bob Marley",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Max%27s_Kansas_City"
+    ]
+},{
+    "address": "217 East Houston Street New York, NY 10002",
+    "range": [19930000, -1],
+    "title": "Mercury Lounge",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Mercury_Lounge"
+    ]
+},{
+    "address": "2960 Broadway New York, NY 10027",
+    "range": [19880000, -1],
+    "title": "Miller Theatre",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Miller_theatre"
+    ]
+},{
+    "address": "66 North 6th Street Brooklyn, NY 11249",
+    "range": [20070000, -1],
+    "title": "Music Hall of Williamsburg",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Music_Hall_of_Williamsburg"
+    ]
+},{
+    "address": "126 East 14th Street New York, NY 10003",
+    "range": [19710000, 19850000],
+    "title": "The Palladium",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Palladium_(New_York_City)"
+    ]
+},{
+    "address": "158 Ludlow Street New York, NY 10002",
+    "range": [20020000, -1],
+    "title": "Pianos",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Pianos"
+    ]
+},{
+    "address": "230 West 74th Street New York, NY 10023",
+    "range": [19770000, 19850101],
+    "title": "Plato's Retreat",
+    "description": "Historic swingers' club",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Plato%27s_Retreat"
+    ]
+},{
+    "address": "95 Prospect Park West Brooklyn, NY 11215",
+    "range": [19390000, -1],
+    "title": "Prospect Park Bandshell",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Prospect_Park_Bandshell"
+    ]
+},{
+    "address": "70 North 6th Street Brooklyn, NY 11211",
+    "range": [20080000, -1],
+    "title": "Public Assembly",
+    "description": "Formerly Galapagos Art Space before it moved to Dumbo",
+    "sources": [
+        "http://www.yelp.com/biz/public-assembly-brooklyn?sort_by=date_asc"
+    ]
+},{
+    "address": "1260 6th Avenue New York, NY 10020",
+    "range": [19320000, -1],
+    "title": "Radio City Music Hall",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Radio_City_Music_Hall"
+    ]
+},{
+    "address": "151 Bleecker Street New York, NY 10012",
+    "range": [19870000, -1],
+    "title": "Red Lion",
+    "sources": [
+        "http://www.redlionnyc.com/"
+    ]
+},{
+    "address": "249 4th Avenue Brooklyn, NY 11215",
+    "range": [20100000, -1],
+    "title": "The Rock Shop",
+    "sources": [
+        "http://brooklynbased.net/blog/2010/11/venue-by-venue-the-rock-shop/"
+    ]
+},{
+    "address": "196 Allen Street New York, NY 10002",
+    "range": [20050000, -1],
+    "title": "Rockwood Music Hall",
+    "sources": [
+        "http://www.nytimes.com/2005/01/28/nyregion/28murder.html"
+    ]
+},{
+    "address": "239 West 52nd Street New York, NY 10019",
+    "range": [19560000, -1],
+    "title": "Roseland Ballroom",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Roseland_Ballroom"
+    ]
+},{
+    "address": "515 West 18th Street New York, NY 10011",
+    "range": [19820000, 20070000],
+    "title": "Roxy NYC",
+    "description": "Dance Club; MC's included Jazzy Jay, Grandmaster Flash",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Roxy_NYC"
+    ]
+},{
+    "address": "96 Lafayette Street New York, NY 10013",
+    "range": [20080000, -1],
+    "title": "Santos Party House",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Santos_Party_House"
+    ]
+},{
+    "address": "123-01 Roosevelt Avenue Flushing, NY 11368",
+    "range": [19650000, 1966000],
+    "title": "Shea Stadium",
+    "description": "Historic Beatles Concerts",
     "sources": [
         ""
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "566 Laguardia Place New York, NY 10012",
+    "range": [20030000, -1],
+    "title": "Skirball Center",
     "sources": [
-        ""
+        "http://en.wikipedia.org/wiki/Skirball_Center_for_the_Performing_Arts"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "204 Varick Street New York, NY 10014",
+    "range": [19820000, -1],
+    "title": "SOB's",
     "sources": [
-        ""
+        "http://en.wikipedia.org/wiki/SOB%27s"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "177 Second Avenue Brooklyn, NY 11221",
+    "range": [20120000, -1],
+    "title": "SRB Brooklyn",
     "sources": [
-        ""
+        "http://newyork.backpage.com/Events/grand-opening-of-srb-brooklyn-with-dj-enuff-everyone-free/29986601"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "260 East 2nd Street New York, NY 10009",
+    "range": [20050000, -1],
+    "title": "The Stone",
+    "description": "John Zorn's experimental music space",
     "sources": [
-        ""
+        "http://en.wikipedia.org/wiki/The_Stone_(music_space)"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "254 West 54th Street New York, NY 10019",
+    "range": [19770000, 19910000],
+    "title": "Studio 54",
     "sources": [
-        ""
+        "http://en.wikipedia.org/wiki/Studio_54"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "214 Sullivan Street New York, NY 10012",
+    "range": [20080101, -1],
+    "title": "Sullivan Hall",
     "sources": [
-        ""
+        "http://www.sullivanhallnyc.com/"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "610 West 56th Street New York, NY 10019",
+    "range": [20030000, -1],
+    "title": "Terminal 5",
     "sources": [
-        ""
+        "http://en.wikipedia.org/wiki/Terminal_5_(venue)"
+    ]
+},{
+    "address": "149 Bleecker Street New York, NY 10012",
+    "range": [19910000, 20120000],
+    "title": "Terra Blues",
+    "sources": [
+        "http://www.terrablues.com/about/index.html"
+    ]
+},{
+    "address": "123 West 43rd Street New York, NY 10036",
+    "range": [19210000, -1],
+    "title": "The Town Hall",
+    "sources": [
+        "http://en.wikipedia.org/wiki/The_Town_Hall"
+    ]
+},{
+    "address": "256 Grand STreet Brooklyn, NY 11211",
+    "range": [20060000, -1],
+    "title": "The Trash Bar",
+    "sources": [
+        "https://www.facebook.com/thetrashbar"
+    ]
+},{
+    "address": "484 Union Avenue Brooklyn, NY 11211",
+    "range": [20010000, -1],
+    "title": "Union Pool",
+    "sources": [
+        "http://union-pool.com/info/"
+    ]
+},{
+    "address": "178 7th Avenue South New York, NY 10014",
+    "range": [19350222, -1],
+    "title": "Village Vanguard",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Village_Vanguard"
+    ]
+},{
+    "address": "261 Driggs Avenue Brooklyn, NY 11222",
+    "range": [20010000, -1],
+    "title": "Warsaw @ The Polish National Home",
+    "sources": [
+        "http://www.freewilliamsburg.com/listings/bars/neighborhood/greenpoint/warsaw-at-polish-national-home"
+    ]
+},{
+    "address": "125 East 11th Street New York, NY 10003",
+    "range": [19920000, -1],
+    "title": "Webster Hall",
+    "description": "Location formerly housed The Ritz",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Webster_hall"
+    ]
+},{
+    "address": "125 East 11th Street New York, NY 10003",
+    "range": [19800501, 19890000],
+    "title": "The Ritz",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Webster_hall"
+    ]
+},{
+    "address": "258 Wythe Avenue Brooklyn, NY 11211",
+    "range": [20040000, -1],
+    "title": "Zebulon",
+    "sources": [
+        "http://zebuloncafeconcert.com/?page_id=749"
+    ]
+},{
+    "address": "108 Avenue A New York, NY 10009",
+    "range": [19810000, 19840000],
+    "title": "A7",
+    "description": "Hardcore Punk Venue",
+    "sources": [
+        "http://en.wikipedia.org/wiki/A7_(bar)"
+    ]
+},{
+    "address": "84 King Street New York, NY 10014",
+    "range": [19760000, 19870000],
+    "title": "Paradise Garage",
+    "description": "Historic LGBT Club",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Paradise_Garage"
+    ]
+},{
+    "address": "1530 Broadway New York, NY 10036",
+    "range": [19810500, 19810600],
+    "title": "Bond's International Casino",
+    "description": "The Clash played there in 1981 and caused a riot",
+    "sources": [
+        "http://en.wikipedia.org/wiki/The_Clash_at_Bond's_Casino"
+    ]
+},{
+    "address": "36 West 62nd Street New York, NY 10023",
+    "range": [19760000, 19800000],
+    "title": "Hurrah",
+    "description": "New Order's 1st US shows; shooting location for Bowie's 'Fashion' music video; Sid Vicious arrested there in 1978",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Hurrah_(nightclub)"
+    ]
+},{
+    "address": "285 West Broadway New York, NY 10013",
+    "range": [19800000, 19810000],
+    "title": "The Rock Lounge",
+    "sources": [
+        "http://theworldsamess.blogspot.com/2010/09/friday-ephemera-80s-clubs-of-new-york.html"
+    ]
+},{
+    "address": "285 West Broadway New York, NY 10013",
+    "range": [20030000, -1],
+    "title": "Canal Room",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Canal_Room"
+    ]
+},{
+    "address": "100 West 72nd Street New York, NY 10023",
+    "range": [19780000, 19820000],
+    "title": "Trax",
+    "sources": [
+        "http://theworldsamess.blogspot.com/2010/09/friday-ephemera-80s-clubs-of-new-york.html"
+    ]
+},{
+    "address": "225 West Broadway New York, NY 10013",
+    "range": [19790000, 19801200],
+    "title": "TR3 aka Tier 3",
+    "sources": [
+        "http://www.furious.com/perfect/tier3.html"
+    ]
+},{
+    "address": "325 Bowery New York, NY 10003",
+    "range": [19700000, 19780000],
+    "title": "The Tin Palace",
+    "sources": [
+        "http://www.furious.com/perfect/tinpalace.html"
+    ]
+},{
+    "address": "500 West 52nd STreet New York, NY 10019",
+    "range": [19790000, 19840000],
+    "title": "Soundscape",
+    "sources": [
+        "http://www.furious.com/perfect/soundscape.html"
+    ]
+},{
+    "address": "128 West 45th Street New York, NY 10036",
+    "range": [19801100, 19820000],
+    "title": "The Peppermint Lounge",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Peppermint_Lounge"
+    ]
+},{
+    "address": "100 5th Avenue New York, NY 10011",
+    "range": [19820000, 19850000],
+    "title": "The New Peppermint Lounge",
+    "sources": [
+        "http://ephemeralnewyork.wordpress.com/2009/06/17/whos-playing-at-the-peppermint-lounge/"
+    ]
+},{
+    "address": "57 St. Mark's Place New York, NY 10003",
+    "range": [19790000, 19830000],
+    "title": "Club 57",
+    "sources": [
+        "http://findarticles.com/p/articles/mi_m0268/is_2_38/ai_57475770/"
+    ]
+},{
+    "address": "285 West Broadway New York, NY 10013",
+    "range": [19820000, 19900000],
+    "title": "The Reggae Lounge / Island Club",
+    "sources": [
+        "http://www.nytimes.com/1990/11/17/nyregion/3-men-are-shot-at-reggae-club-site-of-slayings.html"
+    ]
+},{
+    "address": "107 Norfolk Street New York, NY 10002",
+    "range": [19980000, 200704000],
+    "title": "Tonic",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Tonic_(music_venue)"
+    ]
+},{
+    "address": "158 Bleecker Street New York, NY 10012",
+    "range": [19580000, 19930000],
+    "title": "The Village Gate",
+    "sources": [
+        "http://en.wikipedia.org/wiki/The_Village_Gate"
+    ]
+},{
+    "address": "113 Ludlow Street New York, NY 10002",
+    "range": [19890000, 20010000],
+    "title": "Wetlands Preserve",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Wetlands_Preserve"
+    ]
+},{
+    "address": "88 Seventh Avenue New York, NY 10011",
+    "range": [19740000, 20010000],
+    "title": "Sweet Basil Jazz Club",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Sweet_Basil_Jazz_Club"
+    ]
+},{
+    "address": "88 Seventh Avenue New York, NY 10011",
+    "range": [20020000, 20090000],
+    "title": "Sweet Rhythm",
+    "sources": [
+        "http://www.artsjournal.com/jazzbeyondjazz/2009/10/sweet_rhythm_quietly_ends_run.html"
+    ]
+},{
+    "address": "122 St. Mark's Place New York, NY 10009",
+    "range": [19890000, 19960000],
+    "title": "Sin-e",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Sin-e"
+    ]
+},{
+    "address": "25 Avenue B New York, NY 10009",
+    "range": [19830000, 19930000],
+    "title": "Save the Robots",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Save_the_Robots"
+    ]
+},{
+    "address": "105 Second Avenue New York, NY 10003",
+    "range": [19800000, 19870000],
+    "title": "The Saint",
+    "description": "Gay club in old Fillmore East building",
+    "sources": [
+        "http://en.wikipedia.org/wiki/The_Saint_(club)"
+    ]
+},{
+    "address": "105 Second Avenue New York, NY 10003",
+    "range": [19680308, 19710627],
+    "title": "Fillmore East",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Fillmore_East"
+    ]
+},{
+    "address": "116 Suffolk Street New York, NY 10002",
+    "range": [20040500, 20060000],
+    "title": "Rothko",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Rothko_(club)"
+    ]
+},{
+    "address": "210 West 118th Street New York, NY 10026",
+    "range": [19380000, 19740000],
+    "title": "Minton's Playhouse",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Minton%27s_Playhouse"
+    ]
+},{
+    "address": "214 Sullivan STreet New York, NY 10012",
+    "range": [19900000, 20071200],
+    "title": "Lion's Den",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Lion%27s_Den_(nightclub)"
+    ]
+},{
+    "address": "1545 63rd Street Brooklyn, NY 11219",
+    "range": [19810000, 20040000],
+    "title": "L'Amour",
+    "description": "The Rock Capitol of Brooklyn",
+    "sources": [
+        "http://en.wikipedia.org/wiki/L%27amour_(venue)"
+    ]
+},{
+    "address": "77-00 Queens Blvd. Queens, NY 11373",
+    "range": [19870000, 19880000],
+    "title": "L'Amour East",
+    "sources": [
+        "http://www.setlist.fm/forum/setlistfm/website-support/queens-and-brooklyn-are-not-new-york-ny-4bd6bf9e"
+    ]
+},{
+    "address": "915 Wyckoff Avenue, Queens NY 11385",
+    "range": [20070000, 20110000],
+    "title": "Silent Barn",
+    "sources": [
+        "http://www.facebook.com/silentbarn"
+    ]
+},{
+    "address": "512 West 19th Street New York, NY 10011",
+    "range": [19710000, -1],
+    "title": "The Kitchen",
+    "sources": [
+        "http://www.thekitchen.org/page/24/1"
+    ]
+},{
+    "address": "157 Bleecker Street New York, NY 10012",
+    "range": [19670000, -1],
+    "title": "Kenny's Castaways",
+    "sources": [
+        "http://www.kennyscastaways.net/"
+    ]
+},{
+    "address": "23 St. Mark's Place New York, NY 10003",
+    "range": [19730000, 19730000],
+    "title": "The Circus",
+    "sources": [
+        "http://www.fromthearchives.com/nyd/chronology.html"
+    ]
+},{
+    "address": "82 E. 4th Street New York, NY ",
+    "range": [19580000, 19780000],
+    "title": "Club 82",
+    "description": "Drag club; New York Dolls performed there in 1973",
+    "sources": [
+        "http://rightherenyc.com/MUSIC_SCENE_ROCK.html"
+    ]
+},{
+    "address": "152 Bleecker Street New York, NY 10012",
+    "range": [19640200, 19691000],
+    "title": "Cafe au Go-Go",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Cafe_Au_Go_Go"
+    ]
+},{
+    "address": "289 Hudson Street New York, NY 10013",
+    "range": [19500000, 19720000],
+    "title": "The Half Note",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Half_Note_Club"
+    ]
+},{
+    "address": "116 MacDougal Street New York, NY 10012",
+    "range": [19580000, 19710000],
+    "title": "The Gaslight Cafe",
+    "sources": [
+        "http://en.wikipedia.org/wiki/The_Gaslight_Cafe"
+    ]
+},{
+    "address": "15 West 4th Street New York, NY 10003",
+    "range": [19740000, 20040000],
+    "title": "The Bottom Line",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Bottom_Line"
+    ]
+},{
+    "address": "227 East 56th Street New York, NY 10022",
+    "range": [19750000, 19750000],
+    "title": "Little Hippodrome",
+    "description": "Final New York Dolls NYC shows",
+    "sources": [
+        "http://streetsyoucrossed.blogspot.com/2005/10/from-hip.html"
+    ]
+},{
+    "address": "130 West 3rd Street New York, NY 10012",
+    "range": [19700000, 19870000],
+    "title": "Gerde's Folk City II",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Gerde%27s_Folk_City"
+    ]
+},{
+    "address": "11 West 4th Street New York, NY 10012",
+    "range": [19600000, 19700000],
+    "title": "Gerde's Folk City I",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Gerde%27s_Folk_City"
+    ]
+},{
+    "address": "224 West 53rd Street New York, NY 10019",
+    "range": [19660528, 19750000],
+    "title": "Cheetah",
+    "description": "Birthplace of Salsa",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Cheetah_%28nightclub%29"
+    ]
+},{
+    "address": "301 West 46th Street New York, NY 10036",
+    "range": [19640000, 19700000],
+    "title": "The Scene Club",
+    "description": "Hendrix venue",
+    "sources": [
+        "http://streetsyoucrossed.blogspot.com/2005_06_01_archive.html"
+    ]
+},{
+    "address": "66 Second Avenue New York, NY 11215",
+    "range": [19680000, 19720000],
+    "title": "Anderson Theater",
+    "sources": [
+        "http://streetsyoucrossed.blogspot.com/search?q=anderson+theater"
+    ]
+},{
+    "address": "4600 New Utrecht Avenue Brooklyn, NY 11219",
+    "range": [19700000, 19730000],
+    "title": "46th Street Theatre",
+    "sources": [
+        "http://dithob.blogspot.com/2008/01/obscure-brooklyn-rock-venues.html"
+    ]
+},{
+    "address": "20 Flatbush Avenue Brooklyn, NY 11217",
+    "range": [19280000, 19680000],
+    "title": "Fox Theatre",
+    "description": "Movie theater turned Rock 'n' Roll venue in the 60's",
+    "sources": [
+        "http://www.nycago.org/Organs/Bkln/html/FoxTheatre.html"
+    ]
+},{
+    "address": "108 West 43rd Street New York, NY 10036",
+    "range": [19690000, 19790000],
+    "title": "Hotel Diplomat",
+    "description": "KISS, Ramones",
+    "sources": [
+        "http://streetsyoucrossed.blogspot.com/2005/09/midtown-strutters-ballroom.html"
+    ]
+},{
+    "address": "120 West 44th Street New York, NY 10036",
+    "range": [19740302, 19740302],
+    "title": "Townhouse Theater",
+    "description": "Television's debut show",
+    "sources": [
+        "http://www.thewonder.co.uk/facts/index.htm"
+    ]
+},{
+    "address": "115 MacDougal Street New York, NY 10012",
+    "range": [19550000, -1],
+    "title": "Cafe Wha?",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Cafe_Wha%3F"
+    ]
+},{
+    "address": "656 6th Avenue New York, NY 10011",
+    "range": [19830000, 20020000],
+    "title": "The Limelight",
+    "sources": [
+        "http://en.wikipedia.org/wiki/The_Limelight"
+    ]
+},{
+    "address": "15 St. Mark's Place New York, NY 10003",
+    "range": [19940000, 20010000],
+    "title": "Coney Island High",
+    "sources": [
+        "http://pigbag.tripod.com/coney/"
+    ]
+},{
+    "address": "45 West 21st Street New York, NY 10010",
+    "range": [19880000, 19990000],
+    "title": "Tramps II",
+    "sources": [
+        "http://metrodistortion.blogspot.com/2006/06/ben-harper-live-at-tramps-nyc.html"
+    ]
+},{
+    "address": "61 Fifth Avenue New York, NY 10003",
+    "range": [19760000, 19890000],
+    "title": "The Lone Star Cafe",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Lone_Star_Cafe"
+    ]
+},{
+    "address": "171 Ludlow Street New York, NY 10002",
+    "range": [19950000, 20050000],
+    "title": "Luna Lounge",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Luna_Lounge"
+    ]
+},{
+    "address": "361 Metropolitan Avenue Brooklyn, NY 11211",
+    "range": [20070122, 20080400],
+    "title": "Luna Lounge Brooklyn",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Luna_Lounge"
+    ]
+},{
+    "address": "222 West 23rd Street New York, NY 10011",
+    "range": [19780000, 19780000],
+    "title": "Chelsea Hotel",
+    "description": "Nancy Spungen dies in 1978",
+    "sources": [
+        "http://www.newsday.com/travel/new-york-city-rock-and-roll-landmarks-1.1569369"
+    ]
+},{
+    "address": "1 West 72nd Street New York, NY 10023",
+    "range": [19800000, 19800000],
+    "title": "The Dakota",
+    "description": "John Lennon's death",
+    "sources": [
+        "http://en.wikipedia.org/wiki/John_Lennon"
     ]
 },{
     "address": "",
