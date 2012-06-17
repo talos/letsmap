@@ -39,8 +39,10 @@ LetsMap.AppRouter = Backbone.Router.extend({
         }, this));
 
         // LoD violation
-        this.view.map.on('moveend', function (zoom, lat, lng) {
-            this.navigate('map/' + zoom + '/' + lat + '/' + lng, {
+        // whenever there's a click or movement on the map, bring us there.
+        this.view.map.on('moveend click', function () {
+            var view = this.view.map.getView();
+            this.navigate('map/' + view.zoom + '/' + view.lat + '/' + view.lng, {
                 trigger: true
             });
         }, this);
