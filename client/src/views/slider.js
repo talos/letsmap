@@ -57,6 +57,10 @@ LetsMap.SliderView = Backbone.View.extend({
         this.$marker = $('<div />').addClass('marker');
         this.$el.append(this.$marker);
 
+        /** @type {jQueryObject} */
+        this.$blips = $('<div />').addClass('blips');
+        this.$el.append(this.$blips);
+
         /** @type {function(jQuery.event)} */
         this.startDrag = _.myBind(this.startDrag, this);
 
@@ -105,7 +109,7 @@ LetsMap.SliderView = Backbone.View.extend({
      * @this {LetsMap.SliderView}
      */
     addBlip: function (startValue, endValue) {
-        if (endValue === null) {
+        /*if (endValue === null) {
             // single point
             endValue = startValue;
         }
@@ -115,14 +119,11 @@ LetsMap.SliderView = Backbone.View.extend({
         $('<div />')
             .addClass('blip')
             .css({
-                position: 'absolute',
-                display: 'inline-block',
                 left: leftPerc + '%',
                 width: (rightPerc - leftPerc) + '%'
-            }).appendTo(this.$el);
+            }).appendTo(this.$blips);
 
-
-        //this.$el.append($div);
+        */
     },
 
     /**
