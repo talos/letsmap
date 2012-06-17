@@ -22,12 +22,12 @@
                 throw new Error("You must specify numFrames");
             }
             this._curFrame = this.options.initialFrame;
-            this._images = {};
             var bufferCanvas = L.DomUtil.create('canvas', 'buffer');
             bufferCanvas.style.display = 'none';
             bufferCanvas.width = this.options.tileSize;
             bufferCanvas.height = this.options.tileSize;
             this._bufferCtx = bufferCanvas.getContext('2d');
+            this._imageStore = L.DomUtil.create('div', 'imageStore');
         },
 
         drawTile: function (tile, tilePoint, zoom) {
@@ -35,6 +35,7 @@
                 numFrames = this._numFrames,
                 bufferCtx = this._bufferCtx,
                 curFrame = this._curFrame,
+                imageStore = this._imageStore,
 
                 // called with 'this' as img
                 compositeImage = function () {
@@ -72,22 +73,19 @@
                         tileCtx.fillStyle = 'red';
                         tileCtx.fillRect(0, 0, tile.width, tile.height);
 
-                        //console.log(new Date() - before);
-                        //console.log(data.constructor);
+                        imageStore.removeChild(img);
                     }
                 },
                 img;
 
-            if (this._images.hasOwnProperty(url)) {
-                img = this._images[url];
-                compositeImage.call(img);
-            } else {
-                img = L.DomUtil.create('img', 'animation_preload');
-                img.crossOrigin = '';
-                img.src = url;
-                img.onload = compositeImage;
-                this._images[url] = img;
-            }
+            img = L.DomUtil.create('img', 'animation_preload');
+            imageStore.appendChild(img);
+            img.crossOrigin = '';
+            img.src = url;
+            img.onload = compositeImage;
+            img.onerror = function () {
+                imageStore.removeChild(img);
+            };
         },
 
         /**
