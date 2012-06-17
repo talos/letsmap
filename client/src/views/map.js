@@ -44,10 +44,10 @@ LetsMap.MapView = Backbone.View.extend({
         this.MAP_HOLDER_ID = 'mapHolder';
 
         /** @type {L.StamenTileLayer} */
-        this.base = new L.StamenTileLayer(LETS_MAP_BASE_LAYER_DEFAULT);
+        this._base = new L.StamenTileLayer(LETS_MAP_BASE_LAYER_DEFAULT);
 
         /** @type {L.StamenTileLayer} */
-        this.heatLayer = new L.TileLayer.Animated(
+        this._heatLayer = new L.TileLayer.Animated(
             'tile/{z}/{y}/{x}.jpg',
             2009 - 1966
         );
@@ -65,6 +65,9 @@ LetsMap.MapView = Backbone.View.extend({
 
         /** @type {?L.Map} **/
         this._map = null;
+
+        /** @type {L.LayerGroup */
+        this._venueGroup = new L.LayerGroup();
 
         /** @type {Array.<LetsMap.Marker>} */
         this.markers = [];
@@ -132,7 +135,7 @@ LetsMap.MapView = Backbone.View.extend({
     changeHeatLayer: function (curYear) {
         if (this.curYear !== curYear) {
             if (this.curYear) {
-                this.heatLayer.goToFrame(curYear - 1966);
+                this._heatLayer.goToFrame(curYear - 1966);
             }
             this.curYear = curYear;
         }
@@ -168,8 +171,9 @@ LetsMap.MapView = Backbone.View.extend({
                 minZoom: 11,
                 maxZoom: 15
             });
-            this._map.addLayer(this.base);
-            this._map.addLayer(this.heatLayer);
+            this._map.addLayer(this._base);
+            this._map.addLayer(this._venueGroup);
+            this._map.addLayer(this._heatLayer);
 
             // pass Leaflet events through to backbone
             this._map.on('moveend', function (e) {
@@ -179,6 +183,11 @@ LetsMap.MapView = Backbone.View.extend({
             this._map.on('click', function (e) {
                 this.trigger('click');
             }, this);
+
+            var layerControl = new L.Control.Layers([], [], { collapsed: false });
+            layerControl.addOverlay(this._venueGroup, "Venues");
+            layerControl.addOverlay(this._heatLayer, "Mortgages");
+            this._map.addControl(layerControl);
         }
         var curYear = this.slider.getValue(),
             begin = new Date(curYear, 0, 1),
@@ -188,9 +197,9 @@ LetsMap.MapView = Backbone.View.extend({
 
         _.each(this.markers, _.myBind(function (marker) {
             if (marker.isCurrent(begin, end)) {
-                this._map.addLayer(marker);
+                this._venueGroup.addLayer(marker);
             } else {
-                this._map.removeLayer(marker);
+                this._venueGroup.removeLayer(marker);
             }
         }, this));
 
