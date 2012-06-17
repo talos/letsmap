@@ -4,6 +4,7 @@
 tools/closure-compiler
 client/public/js
 client/public/tile
+client/public/research
 server/build
 server/tmp
 server/run
