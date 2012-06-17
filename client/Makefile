@@ -4,7 +4,7 @@
 all:
 	mkdir -p public/js/lib
 	cp -r lib public/js/lib
-	cp -r ../research public/research
+	cp -r ../research public/
 	cat src/letsmap.js \
 	    src/routers/* \
 	    src/views/* \
