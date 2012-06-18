@@ -11,7 +11,10 @@
     L.TileLayer.Animated = L.TileLayer.Canvas.extend({
         options: {
             async: false,
-            initialFrame: 0
+            initialFrame: 0,
+            reuseTiles: true,
+            delay: 0 // number of ms to wait before image load
+                    // if set to 0, cooperates on render callbacks
         },
 
         initialize: function (url, numFrames, options) {
@@ -36,56 +39,79 @@
                 bufferCtx = this._bufferCtx,
                 curFrame = this._curFrame,
                 imageStore = this._imageStore,
+                map = this._map,
+                tileSize = this.options.tileSize,
+                tileLowerRight = tile._leaflet_pos.add(new L.Point(tileSize, tileSize)),
+                tileBounds = new L.LatLngBounds(map.layerPointToLatLng(tile._leaflet_pos),
+                                                map.layerPointToLatLng(tileLowerRight)),
+                layer = this,
+
+                // check whether a tile is still in view
+                isValid = function () {
+                    return map.getBounds().intersects(tileBounds)
+                        && zoom === map.getZoom()
+                        && curFrame === layer._curFrame;
+                },
 
                 // called with 'this' as img
                 compositeImage = function () {
-                    var tileCtx = tile.getContext('2d'),
-                        img = this,
-                        contents,
-                        data,
-                        i,
-                        len;
+                    if (isValid()) {
+                        var tileCtx = tile.getContext('2d'),
+                            img = this,
+                            contents,
+                            data,
+                            i,
+                            len;
 
-                    // draw the mask
-                    // TODO vary based off of selected frame
-                    if (img.height === 0 && img.width === 0) {
-                        //blank
-                        return;
-                    } else {
-                        bufferCtx.drawImage(img, -tile.width * curFrame, 0,
-                                            tile.width * numFrames, tile.height);
+                        // draw the mask
+                        // TODO vary based off of selected frame
+                        try {
+                            if (img.height > 0 && img.width > 0) {
+                                bufferCtx.drawImage(img, -tile.width * curFrame, 0,
+                                                    tile.width * numFrames, tile.height);
 
-                        contents = bufferCtx.getImageData(0, 0, tile.width, tile.height);
-                        data = contents.data; // cachety cache
-                        len = data.length;
+                                contents = bufferCtx.getImageData(0, 0, tile.width, tile.height);
+                                data = contents.data; // cachety cache
+                                len = data.length;
 
-                        // set the alpha channel from red
-                        i = 0;
-                        //var before = new Date();
-                        while (i < len) {
-                            data[i + 3] = data[i];
-                            //data[i] = 255;
-                            i += 4;
+                                // set the alpha channel from red
+                                i = 0;
+                                //var before = new Date();
+                                while (i < len) {
+                                    data[i + 3] = data[i];
+                                    //data[i] = 255;
+                                    i += 4;
+                                }
+                                tileCtx.putImageData(contents, 0, 0);
+                                tileCtx.globalCompositeOperation = 'source-in';
+                                tileCtx.fillStyle = 'red';
+                                tileCtx.fillRect(0, 0, tile.width, tile.height);
+                            } else {
+                                tileCtx.clearRect(0, 0, tile.width, tile.height);
+                            }
+                        } finally {
+                            imageStore.removeChild(img);
                         }
-                        tileCtx.clearRect(0, 0, tile.width, tile.height);
-                        tileCtx.putImageData(contents, 0, 0);
-                        tileCtx.globalCompositeOperation = 'source-in';
-                        tileCtx.fillStyle = 'red';
-                        tileCtx.fillRect(0, 0, tile.width, tile.height);
-
-                        imageStore.removeChild(img);
                     }
                 },
                 img;
 
-            img = L.DomUtil.create('img', 'animation_preload');
-            imageStore.appendChild(img);
-            img.crossOrigin = '';
-            img.src = url;
-            img.onload = compositeImage;
-            img.onerror = function () {
-                imageStore.removeChild(img);
-            };
+            setTimeout(function () {
+                // after delay, are we still in bounds and same zoom?
+                if (isValid()) {
+                    img = L.DomUtil.create('img', 'animation_preload');
+                    imageStore.appendChild(img);
+                    img.crossOrigin = '';
+                    img.src = url;
+                    img.onload = compositeImage;
+                    // clear out the tile if the image doesn't exist.
+                    img.onerror = function () {
+                        var tileCtx = tile.getContext('2d');
+                        tileCtx.clearRect(0, 0, tile.width, tile.height);
+                        imageStore.removeChild(img);
+                    };
+                }
+            }, this.options.delay);
         },
 
         /**
