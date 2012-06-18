@@ -60,16 +60,16 @@ a:active {
     z-index: 0;
 }
 
-@-moz-keyframes throb {
-    from { color:white; }
-    50% { color: red; }
-    to { color: white; }
+@-moz-keyframes throb-moz {
+    from { color: red; }
+    50% { color: white; }
+    to { color: red; }
 }
 
-@-webkit-keyframes throb {
-    from { font-size: 36px; }
-    50% { font-size: 42px; left: -3px; top: -6px; }
-    to { font-size: 36px; }
+@-webkit-keyframes throb-webkit {
+    from { color: red; }
+    50% { color: white; }
+    to { color: red; }
 }
 
 #app #map #mapHolder .venue-marker {
@@ -77,15 +77,15 @@ a:active {
     text-shadow: 1px 0px 0px black, -1px 0px 0px black, 0px 1px 0px black, 0px -1px 0px black, 2px 2px 0px red, 4px 4px 0px black, 4px 2px 0px black, 2px 4px 0px black;
     font-weight: 300;
     font-family: sans-serif;
-    /*font-family: "Times New Roman", Times, serif;*/
     color: white;
+    cursor: default !important;
 }
 
 #app #map #mapHolder .venue-marker:hover {
-    -moz-animation-name: throb;
+    -moz-animation-name: throb-moz;
     -moz-animation-duration: 1s;
     -moz-animation-iteration-count: infinite;
-    -webkit-animation-name: throb;
+    -webkit-animation-name: throb-webkit;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
 }
@@ -212,16 +212,21 @@ a:active {
 
 /** Patching leaflet **/
 .leaflet-popup-content-wrapper {
-    box-shadow: none;
-    border: none;
+    box-shadow: none !important;
+    -o-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.leaflet-popup-content {
+    margin: 0 !important;
 }
 
 .leaflet-popup-tip-container {
     display: none;
-}
-
-.leaflet-popup-content-wrapper {
-    background: none;
 }
 
 .leaflet-control-zoom {

@@ -30,11 +30,6 @@ LetsMap.Icon = L.DivIcon.extend({
     options: {
         iconUrl: null,
         shadowUrl: null,
-        //iconUrl: 'images/marker.png',
-        //shadowUrl: 'images/marker-shadow.png',
-        //iconSize: new L.Point(38, 95),
-        //shadowSize: new L.Point(68, 95),
-        popupAnchor: new L.Point(0, 51),
         iconAnchor: new L.Point(18, 36),
         className: 'venue-marker'
     },

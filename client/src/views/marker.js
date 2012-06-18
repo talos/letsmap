@@ -83,7 +83,8 @@ LetsMap.Marker = L.Marker.extend({
             closeButton: false
         });*/
         this.popup = new L.Popup({
-            closeButton: false
+            closeButton: false,
+            offset: new L.Point(0, 55)
         }, this);
         this.popup.setLatLng(this._latlng);
         this.popup.setContent(Mustache.render(this.template.html(), data));
