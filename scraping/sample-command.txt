@@ -1,3 +1,3 @@
 # Sample command to run the scraper
 #
-./caustic nyc/acris-index.json --start-id=6010000 --skip-rows=3928 --input-file=input.txt --log --input="FromMonth=01&ToMonth=12&FromDay=1&ToDay=31&FromYear=2009&ToYear=2011" >>output.txt 2>error.txt &
+./caustic nyc/acris-index.json --start-id=30000000 --skip-rows=16849 --input-file=input.txt --log >>output.txt 2>error.txt &
