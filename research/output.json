@@ -62,11 +62,25 @@
             -73.9176201
         ]
     ], 
+    "104 Ave C, New York, NY": [
+        "104 Avenue C, New York, NY 10009, USA", 
+        [
+            40.7240461, 
+            -73.9788836
+        ]
+    ], 
     "100 5th Avenue New York, NY 10011": [
         "100 5th Ave, New York, NY 10011, USA", 
         [
             40.736917, 
             -73.993092
+        ]
+    ], 
+    "1118 Cortelyou Rd, Brooklyn, NY": [
+        "1118 Cortelyou Rd, Brooklyn, NY 11218, USA", 
+        [
+            40.6397, 
+            -73.967299
         ]
     ], 
     "15 St. Mark's Place New York, NY 10003": [
@@ -109,6 +123,13 @@
         [
             40.80594, 
             -73.9406487
+        ]
+    ], 
+    "22-25 Jackson Avenue, Long Island City, NY 11101": [
+        "22-25 Jackson Ave, Queens, NY 11101, USA", 
+        [
+            40.745469, 
+            -73.947108
         ]
     ], 
     "3510 White plains Rd Bronx, NY": [
@@ -223,11 +244,32 @@
             -73.987751
         ]
     ], 
+    "1619 East 174th St., Bronx NY": [
+        "1619 E 174th St, Bronx, NY 10472, USA", 
+        [
+            40.8338944, 
+            -73.8764468
+        ]
+    ], 
     "23 St Mark's Pl New York, NY 10003": [
         "23 St Mark's Pl, New York, NY 10003, USA", 
         [
             40.7290938, 
             -73.9885889
+        ]
+    ], 
+    "259 Banker St., Brooklyn, NY": [
+        "259 Banker St, Brooklyn, NY 11222, USA", 
+        [
+            40.726646, 
+            -73.9563654
+        ]
+    ], 
+    "273 13TH STREET, Brooklyn NY": [
+        "273 13th St, Brooklyn, NY 11215, USA", 
+        [
+            40.6666349, 
+            -73.9878771
         ]
     ], 
     "915 Wyckoff Avenue, Queens NY 11385": [
@@ -279,11 +321,18 @@
             -74.005247
         ]
     ], 
-    "100 West 72nd Street New York, NY 10023": [
-        "100 W 72nd St, New York, NY 10023, USA", 
+    "4 Penn Plaza, Manhattan, NY 10001": [
+        "4 Penn Plaza, New York, NY 10001, USA", 
         [
-            40.7773993, 
-            -73.9791255
+            40.7500538, 
+            -73.9927785
+        ]
+    ], 
+    "929 Broadway, Brooklyn NY": [
+        "929 Broadway, Brooklyn, NY 11206, USA", 
+        [
+            40.697332, 
+            -73.935778
         ]
     ], 
     "127 East 23rd Street New York, NY 10010": [
@@ -314,6 +363,13 @@
             -74.0000275
         ]
     ], 
+    "85A Debevoise Ave, Brooklyn NY": [
+        "85 Debevoise Ave, Brooklyn, NY 11222, USA", 
+        [
+            40.7194082, 
+            -73.9392501
+        ]
+    ], 
     "67-01 110th Street, Forest Hills, New York": [
         "67-1 110th St, Queens, NY 11375, USA", 
         [
@@ -326,6 +382,13 @@
         [
             40.7301659, 
             -74.000664
+        ]
+    ], 
+    "100 West 72nd Street New York, NY 10023": [
+        "100 W 72nd St, New York, NY 10023, USA", 
+        [
+            40.7773993, 
+            -73.9791255
         ]
     ], 
     "2124 Broadway New York, NY 10023": [
@@ -342,6 +405,20 @@
             -74.0016865
         ]
     ], 
+    "98 Meserole Ave, Brooklyn NY": [
+        "98 Meserole Ave, Brooklyn, NY 11222, USA", 
+        [
+            40.72695, 
+            -73.952974
+        ]
+    ], 
+    "93 N 6 St, Brooklyn NY": [
+        "93 N 6th St, Brooklyn, NY 11211, USA", 
+        [
+            40.7185154, 
+            -73.9603165
+        ]
+    ], 
     "155 Varick Street New York, NY 10013": [
         "155 Varick St, New York, NY 10013, USA", 
         [
@@ -354,6 +431,13 @@
         [
             40.725683, 
             -73.991851
+        ]
+    ], 
+    "90 Manhattan Ave, Brooklyn NY": [
+        "90 Manhattan Ave, Brooklyn, NY 11206, USA", 
+        [
+            40.7054051, 
+            -73.9444824
         ]
     ], 
     "1087 Broadway Brooklyn, NY 11221": [
@@ -433,6 +517,13 @@
             -73.999227
         ]
     ], 
+    "125 5th Ave, Brooklyn NY": [
+        "125 5th Ave, Brooklyn, NY 11217, USA", 
+        [
+            40.6786944, 
+            -73.9787716
+        ]
+    ], 
     "108 West 43rd Street New York, NY 10036": [
         "108 W 43rd St, New York, NY 10036, USA", 
         [
@@ -466,6 +557,13 @@
         [
             40.7176847, 
             -74.0013798
+        ]
+    ], 
+    "66 N 6th St, Brooklyn NY": [
+        "66 N 6th St, Brooklyn, NY 11211, USA", 
+        [
+            40.7192879, 
+            -73.9617084
         ]
     ], 
     "149 7th Street Brooklyn, NY 11215": [
@@ -503,11 +601,11 @@
             -73.8709992
         ]
     ], 
-    "2745 Broadway New York, NY 10025": [
-        "2745 Broadway, New York, NY 10025, USA", 
+    "1997 Jerome Ave, Bronx, NY": [
+        "1997 Jerome Ave, Bronx, NY 10453, USA", 
         [
-            40.8009693, 
-            -73.968206
+            40.8527886, 
+            -73.9085469
         ]
     ], 
     "82 E. 4th Street New York, NY ": [
@@ -538,6 +636,20 @@
             -73.965755
         ]
     ], 
+    "20 Meadow St, Brooklyn NY": [
+        "20 Meadow St, Brooklyn, NY 11206, USA", 
+        [
+            40.7104209, 
+            -73.936368
+        ]
+    ], 
+    "622 Degraw St, Brooklyn NY": [
+        "622 Degraw St, Brooklyn, NY 11217, USA", 
+        [
+            40.679167, 
+            -73.983473
+        ]
+    ], 
     "169 3rd. ave. Bronx, NY": [
         "169 3rd Ave, Bronx, NY 10465, USA", 
         [
@@ -566,6 +678,13 @@
             -73.9919732
         ]
     ], 
+    "400 East Tremont Avenue, Bronx NY": [
+        "400 E Tremont Ave, Bronx, NY 10457, USA", 
+        [
+            40.8475277, 
+            -73.9007966
+        ]
+    ], 
     "35 East 76th Street New York, NY 10075": [
         "35 E 76th St, New York, NY 10075, USA", 
         [
@@ -580,6 +699,13 @@
             -73.9950116
         ]
     ], 
+    "702 Union St, Brooklyn, NY": [
+        "702 Union St, Brooklyn, NY 11215, USA", 
+        [
+            40.6761586, 
+            -73.980063
+        ]
+    ], 
     "84 King Street New York, NY 10014": [
         "84 King St, New York, NY 10014, USA", 
         [
@@ -592,6 +718,13 @@
         [
             40.8294352, 
             -73.8975797
+        ]
+    ], 
+    "389 MELROSE ST, Brooklyn NY": [
+        "389 Melrose St, Brooklyn, NY 11237, USA", 
+        [
+            40.7045462, 
+            -73.9272151
         ]
     ], 
     "57 St. Mark's Place New York, NY 10003": [
@@ -650,6 +783,13 @@
             -73.9898
         ]
     ], 
+    "186 Bedford Ave, Brooklyn NY": [
+        "186 Bedford Ave, Brooklyn, NY 11211, USA", 
+        [
+            40.717696, 
+            -73.9580272
+        ]
+    ], 
     "258 Wythe Avenue Brooklyn, NY 11211": [
         "258 Wythe Ave, Brooklyn, NY 11211, USA", 
         [
@@ -683,6 +823,13 @@
         [
             40.703371, 
             -73.9908529
+        ]
+    ], 
+    "89 Varet St, Brooklyn NY": [
+        "89 Varet St, Brooklyn, NY 11206, USA", 
+        [
+            40.70332, 
+            -73.941849
         ]
     ], 
     "213 Park Ave S Manhattan, NY 10003": [
@@ -727,6 +874,13 @@
             -73.980024
         ]
     ], 
+    "981 Southern Blvd, Bronx, NY": [
+        "981 Southern Blvd, Bronx, NY 10459, USA", 
+        [
+            40.822238, 
+            -73.89214
+        ]
+    ], 
     "105 Second Avenue New York, NY 10003": [
         "105 2nd Ave, New York, NY 10003, USA", 
         [
@@ -739,6 +893,13 @@
         [
             40.7659139, 
             -73.990882
+        ]
+    ], 
+    "1788 Jerome Ave, Bronx NY": [
+        "1788 Jerome Ave, Bronx, NY 10453, USA", 
+        [
+            40.8484219, 
+            -73.9116924
         ]
     ], 
     "214 Sullivan STreet New York, NY 10012": [
@@ -809,6 +970,13 @@
         [
             40.8165578, 
             -73.8608847
+        ]
+    ], 
+    "953 Southern Blvd, Bronx, NY": [
+        "953 Southern Blvd, Bronx, NY 10459, USA", 
+        [
+            40.8210172, 
+            -73.8916414
         ]
     ], 
     "122 St. Mark's Place New York, NY 10009": [
@@ -923,11 +1091,11 @@
             -73.9980099
         ]
     ], 
-    "196 Allen Street New York, NY 10002": [
-        "196 Allen St, New York, NY 10002, USA", 
+    "155 East 149th Street, Bronx, NY": [
+        "155 E 149th St, Bronx, NY 10451, USA", 
         [
-            40.7224438, 
-            -73.9886974
+            40.8188122, 
+            -73.9276507
         ]
     ], 
     "57 St Mark's Pl Manhattan, NY 10003": [
@@ -937,18 +1105,25 @@
             -73.986378
         ]
     ], 
-    "4 Pennsylvania Plaza New York, NY 10001": [
-        "4 Pennsylvania Ave, Brooklyn, NY 11207, USA", 
+    "177 Second Avenue Brooklyn, NY 11221": [
+        "177 2nd Ave, Brooklyn, NY 11215, USA", 
         [
-            40.6778848, 
-            -73.897424
+            40.6696348, 
+            -73.9956875
         ]
     ], 
-    "311 West 34th Street New York, NY 10001": [
-        "311 W 34th St, New York, NY 10001, USA", 
+    "1680 Seward ave, Bronx NY": [
+        "1680 Seward Ave, Bronx, NY 10473, USA", 
         [
-            40.752664, 
-            -73.994309
+            40.8183153, 
+            -73.8693855
+        ]
+    ], 
+    "Webster ave. and Claremont Bronx,  NY": [
+        "Webster Ave, Bronx, NY, USA", 
+        [
+            40.8449655, 
+            -73.9024795
         ]
     ], 
     "1965 Lafayette Avenue, Bronx, NY": [
@@ -965,6 +1140,13 @@
             -73.984305
         ]
     ], 
+    "196 Allen Street New York, NY 10002": [
+        "196 Allen St, New York, NY 10002, USA", 
+        [
+            40.7224438, 
+            -73.9886974
+        ]
+    ], 
     "204 Varick Street New York, NY 10014": [
         "204 Varick St, New York, NY 10014, USA", 
         [
@@ -979,18 +1161,18 @@
             -73.9279957
         ]
     ], 
-    "128 West 45th Street New York, NY 10036": [
-        "128 W 45th St, New York, NY 10036, USA", 
+    "2745 Broadway New York, NY 10025": [
+        "2745 Broadway, New York, NY 10025, USA", 
         [
-            40.7573417, 
-            -73.9840496
+            40.8009693, 
+            -73.968206
         ]
     ], 
-    "177 Second Avenue Brooklyn, NY 11221": [
-        "177 2nd Ave, Brooklyn, NY 11215, USA", 
+    "285 Kent Ave, Brooklyn NY": [
+        "285 Kent Ave, Brooklyn, NY 11211, USA", 
         [
-            40.6696348, 
-            -73.9956875
+            40.714904, 
+            -73.9666157
         ]
     ], 
     "515 West 18th Street New York, NY 10011": [
@@ -1007,11 +1189,11 @@
             -73.9138737
         ]
     ], 
-    "Webster ave. and Claremont Bronx,  NY": [
-        "Webster Ave, Bronx, NY, USA", 
+    "311 West 34th Street New York, NY 10001": [
+        "311 W 34th St, New York, NY 10001, USA", 
         [
-            40.8449655, 
-            -73.9024795
+            40.752664, 
+            -73.994309
         ]
     ], 
     "95 Stanton Street New York, NY 10002": [
@@ -1049,6 +1231,13 @@
             -73.8597168
         ]
     ], 
+    "957 Broadway, Brooklyn NY": [
+        "957 Broadway, Brooklyn, NY 11221, USA", 
+        [
+            40.696878, 
+            -73.934719
+        ]
+    ], 
     "512 West 19th Street New York, NY 10011": [
         "512 W 19th St, New York, NY 10011, USA", 
         [
@@ -1061,6 +1250,13 @@
         [
             40.7067514, 
             -73.7537917
+        ]
+    ], 
+    "557 Manhattan Ave, Brooklyn NY": [
+        "557 Manhattan Ave, Brooklyn, NY 11222, USA", 
+        [
+            40.7222227, 
+            -73.9499885
         ]
     ], 
     "610 West 56th Street New York, NY 10019": [
@@ -1154,6 +1350,13 @@
             -74.000443
         ]
     ], 
+    "66 Greenpoint Ave, Brooklyn NY": [
+        "66 Greenpoint Ave, Brooklyn, NY 11222, USA", 
+        [
+            40.7295609, 
+            -73.958326
+        ]
+    ], 
     "361 Metropolitan Avenue Brooklyn, NY 11211": [
         "361 Metropolitan Ave, Brooklyn, NY 11211, USA", 
         [
@@ -1180,6 +1383,13 @@
         [
             40.7558484, 
             -73.9453407
+        ]
+    ], 
+    "128 West 45th Street New York, NY 10036": [
+        "128 W 45th St, New York, NY 10036, USA", 
+        [
+            40.7573417, 
+            -73.9840496
         ]
     ], 
     "270 Kent Avenue Brooklyn, NY 11211": [

@@ -219,7 +219,7 @@
         "http://blogs.villagevoice.com/music/2011/05/kool_herc_new_york_1520_sedgwick_avenue.php"
     ]
 },{
-    "address": "Jerome Avenue, between Tremont and Burnside Avenues Bronx, NY",
+    "address": "1997 Jerome Ave, Bronx, NY",
     "range": [19730000, null],
     "title": "Twilight Zone",
     "sources": [
@@ -251,7 +251,7 @@
         "http://www.thafoundation.com/troylist2.htm"
     ]
 },{
-    "address": "East Tremont and Webster ave",
+    "address": "400 East Tremont Avenue, Bronx NY",
     "range": [19840000, null],
     "title": "Disco Fever II",
     "sources": [
@@ -274,7 +274,7 @@
         "http://www.hiphop-network.com/articles/djarticles/kooldjherc.asp"
     ]
 },{
-    "address": "1619 East 174th st. Bronx river Ave, Bronx NY",
+    "address": "1619 East 174th St., Bronx NY",
     "range": [19730000, 19810000],
     "title": "Bronx River Center",
     "description": "Zulu home",
@@ -375,14 +375,14 @@
         "http://www.thafoundation.com/troylist2.htm"
     ]
 },{
-    "address": "953 Southern Blvd",
+    "address": "953 Southern Blvd, Bronx, NY",
     "range": [null, null],
     "title": "Hunts Point Palace",
     "sources": [
         "http://www.thafoundation.com/troylist2.htm"
     ]
 },{
-    "address": "981 Southern Blvd",
+    "address": "981 Southern Blvd, Bronx, NY",
     "range": [null, null],
     "title": "Kelly's Palace",
     "sources": [
@@ -431,7 +431,7 @@
         "http://www.thafoundation.com/troylist2.htm"
     ]
 },{
-    "address": "149 St and Grand Concourse, Bronx, NY",
+    "address": "155 East 149th Street, Bronx, NY",
     "range": [null, null],
     "title": "Recovery Room",
     "description": "After hours spot",
@@ -446,7 +446,7 @@
         "http://www.thafoundation.com/troylist2.htm"
     ]
 },{
-    "address": "176 St and Jerome Av, Bronx NY",
+    "address": "1788 Jerome Ave, Bronx NY",
     "range": [null, null],
     "title": "Skate Fever",
     "sources": [
@@ -474,7 +474,7 @@
         "http://www.thafoundation.com/troylist2.htm"
     ]
 },{
-    "address": "1680 Seward ave",
+    "address": "1680 Seward ave, Bronx NY",
     "range": [null, null],
     "title": "Sound View Com. Center",
     "sources": [
@@ -798,7 +798,7 @@
         "http://www.timeout.com/newyork/music/le-poisson-rouge"
     ]
 },{
-    "address": "4 Pennsylvania Plaza New York, NY 10001",
+    "address": "4 Penn Plaza, Manhattan, NY 10001",
     "range": [19680000, -1],
     "title": "Madison Square Garden",
     "sources": [
@@ -1448,6 +1448,541 @@
     "description": "John Lennon's death",
     "sources": [
         "http://en.wikipedia.org/wiki/John_Lennon"
+    ]
+},{
+    "address": "957 Broadway, Brooklyn NY",
+    "range": [20080209, 20100404],
+    "title": "Market Hotel",
+    "sources": [
+        "http://www.brooklynvegan.com/archives/2008/02/the_market_hote.html",
+        "http://www.brooklynvegan.com/archives/2010/04/market_hotel_go_1.html"
+    ]
+},{
+    "address": "285 Kent Ave, Brooklyn NY",
+    "range": [20110000, -1],
+    "title": "285 Kent Ave",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "89 Varet St, Brooklyn NY",
+    "range": [20111104, -1],
+    "title": "Big Snow Buffalo Lodge",
+    "sources": [
+        "http://www.brooklynvegan.com/archives/2011/11/big_snow_buffal.html"
+    ]
+},{
+    "address": "93 N 6 St, Brooklyn NY",
+    "range": [20090000, -1],
+    "title": "Cameo Gallery",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "66 N 6th St, Brooklyn NY",
+    "range": [20010000, 20070000],
+    "title": "Northsix",
+    "sources": [
+        "http://en.wikipedia.org/wiki/Northsix"
+    ]
+},{
+    "address": "557 Manhattan Ave, Brooklyn NY",
+    "range": [20060000, -1],
+    "title": "Bar Matchless",
+    "sources": [
+        "http://www.myspace.com/matchlessbar"
+    ]
+},{
+    "address": "85A Debevoise Ave, Brooklyn NY",
+    "range": [20090500, 20100000],
+    "title": "Shea Stadium",
+    "sources": [
+        "http://www.brooklynvegan.com/archives/2009/05/shea_stadium_ne.html"
+    ]
+},{
+    "address": "20 Meadow St, Brooklyn NY",
+    "range": [20100000, -1],
+    "title": "Shea Stadium",
+    "sources": [
+        "http://liveatsheastadium.com/blog/"
+    ]
+},{
+    "address": "22-25 Jackson Avenue, Long Island City, NY 11101",
+    "range": [19970000, -1],
+    "title": "P.S. 1 Warm Up",
+    "sources": [
+        "http://en.wikipedia.org/wiki/MoMA_PS1"
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "Brooklyn Academy of Music",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "186 Bedford Ave, Brooklyn NY",
+    "range": [20070000, -1],
+    "title": "Spike Hill",
+    "sources": [
+        "http://www.myspace.com/spikehillnyc"
+    ]
+},{
+    "address": "929 Broadway, Brooklyn NY",
+    "range": [20100100, -1],
+    "title": "Xpo 929",
+    "sources": [
+        "http://www.xpo929.com/about.html"
+    ]
+},{
+    "address": "273 13TH STREET, Brooklyn NY",
+    "range": [20040000, 20090000],
+    "title": "Lucky 13 Saloon",
+    "sources": [
+        "http://www.myspace.com/lucky13saloon"
+    ]
+},{
+    "address": "259 Banker St., Brooklyn, NY",
+    "range": [20060900, 20090000],
+    "title": "Studio B",
+    "sources": [
+        "http://www.brooklynvegan.com/archives/2006/09/studio_b_in_bro.html"
+    ]
+},{
+    "address": "702 Union St, Brooklyn, NY",
+    "range": [20060816, -1],
+    "title": "Union Hall",
+    "sources": [
+        "http://www.brooklynvegan.com/archives/2006/08/takka_takka_uni.html"
+    ]
+},{
+    "address": "125 5th Ave, Brooklyn NY",
+    "range": [20020600, 20120220],
+    "title": "Southpaw",
+    "sources": [
+        "http://spsounds.com/",
+        "http://www.brooklynvegan.com/archives/2012/02/update_final_ev.html"
+    ]
+},{
+    "address": "622 Degraw St, Brooklyn NY",
+    "range": [20080000, -1],
+    "title": "Littlefield",
+    "sources": [
+        "http://www.brooklynvegan.com/archives/2008/09/littlefield_ano.html"
+    ]
+},{
+    "address": "104 Ave C, New York, NY",
+    "range": [20060100, -1],
+    "title": "Alphabet Lounge",
+    "sources": [
+        "http://www.alphabetnyc.com/site/about.php"
+    ]
+},{
+    "address": "98 Meserole Ave, Brooklyn NY",
+    "range": [20070312, -1],
+    "title": "Europa",
+    "sources": [
+        "http://europaclub.com/",
+        "http://www.brooklynvegan.com/archives/2007/03/club_europa_in.html"
+    ]
+},{
+    "address": "1118 Cortelyou Rd, Brooklyn, NY",
+    "range": [20090400, -1],
+    "title": "Sycamore",
+    "sources": [
+        "http://www.brooklynvegan.com/archives/2009/04/sycamore_hostin.html"
+    ]
+},{
+    "address": "90 Manhattan Ave, Brooklyn NY",
+    "range": [20060000, -1],
+    "title": "Don Pedro",
+    "sources": [
+        "http://garagepunknyc.com/garagepunknycvenuesmap.html#don_pedro"
+    ]
+},{
+    "address": "389 MELROSE ST, Brooklyn NY",
+    "range": [20040000, -1],
+    "title": "Secret Project Robot",
+    "sources": [
+        "http://www.secretprojectrobot.org/secretprojectorobot/Schedule.html"
+    ]
+},{
+    "address": "105 Eldridge St",
+    "range": [20060000, -1],
+    "title": "Fontana's",
+    "sources": [
+        "http://www.fontanasnyc.com/"
+    ]
+},{
+    "address": "66 Greenpoint Ave, Brooklyn NY",
+    "range": [20070000, 20110000],
+    "title": "Coco66",
+    "sources": [
+        "http://www.brooklynvegan.com/archives/2007/09/meanwhile_beiru.html"
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
+    ]
+},{
+    "address": "",
+    "range": [null, null],
+    "title": "",
+    "sources": [
+        ""
     ]
 },{
     "address": "",
