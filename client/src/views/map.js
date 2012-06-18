@@ -151,6 +151,7 @@ LetsMap.MapView = Backbone.View.extend({
         }
         var center = this._map.getCenter();
         return {
+            year: this.slider.getValue(),
             zoom: this._map.getZoom(),
             lat: center.lat,
             lng: center.lng
@@ -177,11 +178,13 @@ LetsMap.MapView = Backbone.View.extend({
 
             // pass Leaflet events through to backbone
             this._map.on('moveend', function (e) {
-                var center = this._map.getCenter();
-                this.trigger('moveend', this._map.getZoom(), center.lat, center.lng);
+                this.trigger('changeview');
             }, this);
             this._map.on('click', function (e) {
                 this.trigger('click');
+            }, this);
+            this.slider.on('endDrag', function (e) {
+                this.trigger('changeview');
             }, this);
 
             var layerControl = new L.Control.Layers([], [], { collapsed: false });
@@ -206,7 +209,15 @@ LetsMap.MapView = Backbone.View.extend({
         return this;
     },
 
-    goTo: function (zoom, lat, lng) {
+    /**
+     * @param {number} year
+     * @param {number} zoom
+     * @param {number} lat
+     * @param {number} lng
+     * @this {LetsMap.AppView}
+     */
+    goTo: function (year, zoom, lat, lng) {
+        this.slider.setValue(year);
         this._map.setZoom(zoom);
         this._map.panTo(new L.LatLng(lat, lng));
     }

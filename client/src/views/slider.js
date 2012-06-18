@@ -217,5 +217,28 @@ LetsMap.SliderView = Backbone.View.extend({
         var val = this.options.min + (left * ratio);
 
         return this.options.quantize ? Math.round(val) : val;
+    },
+
+    /**
+     * Set the value of the slider.
+     * @param {number} n The value to set it to.
+     * @this {LetsMap.SliderView}
+     */
+    setValue: function (n) {
+        n = this.options.min > n ? this.options.min : n;
+        n = this.options.max < n ? this.options.max : n;
+        var width = this.$el.outerWidth() - this.$marker.outerWidth();
+        var range = this.options.max - this.options.min;
+        var x = width * ((n - this.options.min) / range);
+
+        this.$marker.css({
+            left: x + 'px'
+        });
+        this.trigger('endDrag', this.getValue());
+        /*, {
+            complete: _.bind(function () {
+                this.trigger('endDrag', this.getValue());
+            }, this)
+        });*/
     }
 });

@@ -79,8 +79,28 @@ LetsMap.Marker = L.Marker.extend({
         this.isCurrent = this.isCurrent || undefined;
 
         // bind a popup
-        this.bindPopup(Mustache.render(this.template.html(), data), {
+        /*this.bindPopup(Mustache.render(this.template.html(), data), {
             closeButton: false
+        });*/
+        this.popup = new L.Popup({
+            closeButton: false
+        }, this);
+        this.popup.setLatLng(this._latlng);
+        this.popup.setContent(Mustache.render(this.template.html(), data));
+    },
+
+    /**
+     * Override initIcon to show popup on rollover.
+     */
+    _initIcon: function () {
+        var popup = this.popup,
+            map = this._map;
+        L.Marker.prototype._initIcon.call(this);
+        $(this._icon).on('mouseenter', function () {
+            map.openPopup(popup);
+        });
+        $(this._icon).on('mouseleave', function () {
+            map.closePopup();
         });
     },
 

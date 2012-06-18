@@ -31,7 +31,7 @@ LetsMap.AppRouter = Backbone.Router.extend({
         var routes = [
             ['', 'map'],
             ['about', 'about'],
-            ['map/:zoom/:lat/:lng', 'map']
+            ['map/:year/:zoom/:lat/:lng', 'map']
         ];
 
         _.each(routes, _.bind(function (route) {
@@ -40,18 +40,18 @@ LetsMap.AppRouter = Backbone.Router.extend({
 
         // LoD violation
         // whenever there's a click or movement on the map, bring us there.
-        this.view.map.on('moveend click', function () {
+        this.view.map.on('changeview click', function () {
             var view = this.view.map.getView();
-            this.navigate('map/' + view.zoom + '/' + view.lat + '/' + view.lng, {
+            this.navigate('map/' + view.year + '/' + view.zoom + '/' + view.lat + '/' + view.lng, {
                 trigger: true
             });
         }, this);
     },
 
-    map: function (zoom, lat, lng) {
+    map: function (year, zoom, lat, lng) {
         this.view.about.$el.hide();
-        if (zoom && lat && lng) {
-            this.view.map.goTo(zoom, lat, lng);
+        if (year && zoom && lat && lng) {
+            this.view.map.goTo(year, zoom, lat, lng);
         }
     },
 
