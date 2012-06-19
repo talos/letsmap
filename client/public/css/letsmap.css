@@ -50,6 +50,10 @@ a:active {
     padding-bottom: 0.5em;
 }
 
+#app #about .text a {
+    color: red;
+}
+
 #app #map {
 }
 
