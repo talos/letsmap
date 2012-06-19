@@ -21,19 +21,26 @@
 
         <script type="text/html" id="aboutTemplate">
             <div class="text">
-                <div>Let&#145;s map the relationship between investment and cultural production!</div>
+                <div>Let&#146;s map the relationship between investment and cultural production!</div>
                 <h2>What?</h2>
-                <div>Dots (accumulating into splotches) of red are mortgages made for specific properties for the selected year.  If there were a few for a single property, the splotch gets a bit bigger (that&#145;s why the map blushes in the mid-aughts).</div>
-                <div>Drag the circle at the bottom to change which year you&#145;re looking at.</div>
-                <div>Click on the notes to get a little more info about the musical venue or event.</div>
+                <div>The red heatmap is generated from <a href="http://www.nyc.gov/html/dof/html/jump/acris.shtml" target="_blank">New York City Register</a> mortgage data, year by year.  If you zoom in, you&#146;ll see the splotches break into dots property-by-property. If there were a few mortgages in a single year for a single property, the splotch gets a bit bigger (that&#146;s why the map blushes in the mid-aughts).</div>
+                <div>Drag the circle at the bottom to change which year you&#146;re looking at.</div>
+                <div>Hover over a note to see the name of the venue or event.</div>
                 <h2>Why?</h2>
-                <div>Mortgages represent concrete investment in a neighborhood.  Also, I happened to have every mortgage in NYC from 1966 to 2008 sitting in a file.</div>
-                <div>The one residue of music that fits well on a map over time are particular live happenings or meetings in general, and venues in particular.  The map leans towards venues.  They&#145;re easier to track down.</div>
+                <div>Mortgages represent concrete investment in a neighborhood.</div>
+                <div>Music venues will be more successful in areas where locals are interested in making music.</div> 
 
                 <h2>Why not?</h2>
-                <div>Mortgage investment is not an adequate indicator of economic investment in a neighborhood, but you can probably convince yourself it&#145;s not so bad... and what other data can you get at such precise detail?  On the map is every mortgage on record from the city&#145;s register.</div>
-                <div>Can you imagine what it even means to try and graph cultural production?  Sure you have.  It would look sweet.  Why music and not art?</div>
-                <div>Cultural production can&#145;t be </div>
+                <div>Mortgage investment is not an adequate indicator of economic investment in a neighborhood.</div>
+                <div>Cultural production is even more ambiguous that "economic investment," and music is only a part of it.  Live music is sometimes local, but even more often it&#146;s mobile...</div>
+
+                <h2>What?</h2>
+                <div>Draw your own conclusions, if any.  Be on guard against any map that makes a stated point self-evident</div>
+                <div>Don&#146;t forget to take a look at the wild ride the banks have taken the city (and certain neighborhoods) for over a few decades.</div>
+
+                <h2>Who?</h2>
+                <div><a href="http://blog.accursedware.com/">John Krauss</a> put together the maps, mortgage data, and some venues;  <a href="https://twitter.com/#!/meh2151">Matt Herzfeld</a> did tons of heavy lifting on the venues.</div>
+                <div>The code is all on <a target="_blank" href="https://github.com/talos/letsmap">GitHub</a>, excepting the image tiles.  It&#146;s a static site.</div>
             </div>
         </script>
 
@@ -54,13 +61,13 @@
     </head>
 
     <body>
-        <script type="text/javascript" src="js/lib/leaflet-src.js"></script>
+        <script type="text/javascript" src="js/lib/leaflet.js"></script>
         <script type="text/javascript" src="js/lib/tile.stamen.js"></script>
         <script type="text/javascript" src="js/lib/mustache.js"></script>
-        <script type="text/javascript" src="js/lib/jquery-1.7.2.js"></script>
-        <script type="text/javascript" src="js/lib/underscore.js"></script>
-        <script type="text/javascript" src="js/lib/backbone.js"></script>
-        <!-- <script type="text/javascript" src="js/letsmap.min.js"></script> -->
+        <script type="text/javascript" src="js/lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+        <script type="text/javascript" src="js/lib/backbone-min.js"></script>
+        <!--<script type="text/javascript" src="js/letsmap.min.js"></script>-->
         <script type="text/javascript" src="js/letsmap.js"></script>
     </body>
 </html>
