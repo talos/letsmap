@@ -12,7 +12,7 @@ all:
 	    src/Magic8Ball.js \
 	    > public/js/letsmap.js
 	java -jar ../tools/closure-compiler/compiler.jar \
-	    --compilation_level SIMPLE_OPTIMIZATIONS \
+	    --compilation_level WHITESPACE_ONLY \
 	    --process_jquery_primitives \
 	    --summary_detail_level 3 \
 	    --warning_level VERBOSE \
