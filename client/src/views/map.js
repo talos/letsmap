@@ -66,7 +66,7 @@ LetsMap.MapView = Backbone.View.extend({
         /** @type {?L.Map} **/
         this._map = null;
 
-        /** @type {L.LayerGroup */
+        /** @type {L.LayerGroup} */
         this._venueGroup = new L.LayerGroup();
 
         /** @type {Array.<LetsMap.Marker>} */
@@ -180,13 +180,16 @@ LetsMap.MapView = Backbone.View.extend({
             this._map.on('moveend', function (e) {
                 this.trigger('changeview');
             }, this);
-            this._map.on('click', function (e) {
-                this.trigger('click');
-            }, this);
             this.slider.on('endDrag', function (e) {
                 this.trigger('changeview');
             }, this);
 
+            /*
+            this._map.on('click', function (e) {
+                debugger;
+                this.trigger('click');
+            }, this);
+           */
             var layerControl = new L.Control.Layers([], [], { collapsed: false });
             layerControl.addOverlay(this._venueGroup, "Venues");
             layerControl.addOverlay(this._heatLayer, "Mortgages");

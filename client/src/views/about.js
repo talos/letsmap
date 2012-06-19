@@ -30,12 +30,6 @@ LetsMap.AboutView = Backbone.View.extend({
     /**
      * @this {LetsMap.AboutView}
      */
-    initialize: function (options) {
-    },
-
-    /**
-     * @this {LetsMap.AboutView}
-     */
     render: function () {
         this.$el.html(Mustache.render(this.tmpl.html(), {}));
     }
