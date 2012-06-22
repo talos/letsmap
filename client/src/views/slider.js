@@ -73,7 +73,9 @@ LetsMap.SliderView = Backbone.View.extend({
         /* Backbone can't have this property munged by closure. */
         this['events'] = {
             'mousedown .marker': this.startDrag,
-            'click': this.click
+            'mousedown': this.startHold,
+            'mouseup': this.endHold,
+            'mouseleave': this.endHold
         };
 
         $(window).mouseup(this.endDrag);
@@ -142,16 +144,39 @@ LetsMap.SliderView = Backbone.View.extend({
      * @this {LetsMap.SliderView}
      */
     click: function (evt) {
-        /** @type {number} **/
-        var left = this.$marker.position().left - this.initialLeftOffset();
-        var right = left + this.$marker.outerWidth();
+    },
+
+    /**
+     * A hold-down on the slider.  Move us towards one side.
+     * @param {jQuery.event} evt
+     * @this {LetsMap.SliderView}
+     */
+    startHold: function (evt) {
         var x = (evt.pageX - this.initialLeftOffset()) -
-            this.$el.offset().left;
-        if (x > right) {
-            this.setValue(this.getValue() + 1);
-        } else if (x < left) {
-            this.setValue(this.getValue() - 1);
-        }
+            this.$el.offset().left,
+            initialLeftOffset = this.initialLeftOffset(),
+            $marker = this.$marker,
+            slider = this,
+            fps = 15; // 15 years per second of hold
+
+        this._holdSlider = setInterval(function () {
+            var left = $marker.position().left - initialLeftOffset;
+            var right = left + $marker.outerWidth();
+            if (x > right) {
+                slider.setValue(slider.getValue() + 1);
+            } else if (x < left) {
+                slider.setValue(slider.getValue() - 1);
+            }
+        }, 1000 / fps);
+    },
+
+    /**
+     * Trigger end-of-hold.
+     * @param {jQuery.event} evt
+     * @this {LetsMap.SliderView}
+     */
+    endHold: function (evt) {
+        clearInterval(this._holdSlider);
     },
 
     /**
