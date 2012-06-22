@@ -42,6 +42,11 @@
         },
 
         drawTile: function (tile, tilePoint, zoom) {
+            // it's possible that this would be called when unbound from
+            // a map (!)
+            if (!this._map) {
+                return;
+            }
             var url = this.getTileUrl(tilePoint, zoom),
                 numFrames = this._numFrames,
                 bufferCtx = this._bufferCtx,
