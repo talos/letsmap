@@ -194,36 +194,38 @@ LetsMap.SliderView = Backbone.View.extend({
      */
     drag: _.debounce(function (evt) {
 
+        var $el = this.$el,
+            $marker = this.$marker,
+            options = this.options,
+            initialLeftOffset = this.initialLeftOffset();
+
         /** @type {number} **/
         var x = (evt.pageX - this.initialLeftOffset()) -
-            this.$el.offset().left;
+            $el.offset().left;
 
         /** @type {number} **/
-        var width = this.$el.outerWidth();
+        var width = $el.outerWidth();
 
         /** @type {number} **/
-        var markerWidth = this.$marker.outerWidth();
+        var markerWidth = $marker.outerWidth();
 
         width = width - markerWidth;
 
         /** @type {number} **/
-        var range = this.options.max - this.options.min;
+        var range = options.max - options.min;
 
         /** @type {number} **/
         var ratio = range / width;
 
-        /** @type {number} **/
-        var val;
-
         x = x < 0 ? 0 : x;
         x = x > width ? width : x;
 
-        if (this.options.quantize) {
+        if (options.quantize) {
             x = Math.round(x * ratio) / ratio;
         }
 
-        this.$marker.css({
-            left: (x + this.initialLeftOffset()) + 'px'
+        $marker.css({
+            left: (x + initialLeftOffset) + 'px'
         });
 
         this.trigger('drag', this.getValue());
@@ -245,22 +247,25 @@ LetsMap.SliderView = Backbone.View.extend({
      * @this {LetsMap.SliderView}
      */
     getValue: function () {
+        var options = this.options,
+            $marker = this.$marker,
+            $el = this.$el;
         /** @type {number} **/
-        var width = this.$el.outerWidth() - this.$marker.outerWidth();
+        var width = $el.outerWidth() - $marker.outerWidth();
 
         /** @type {number} **/
-        var range = this.options.max - this.options.min;
+        var range = options.max - options.min;
 
         /** @type {number} **/
         var ratio = range / width;
 
         /** @type {number} **/
-        var left = this.$marker.position().left - this.initialLeftOffset();
+        var left = $marker.position().left - this.initialLeftOffset();
 
         /** @type {number} **/
-        var val = this.options.min + (left * ratio);
+        var val = options.min + (left * ratio);
 
-        return this.options.quantize ? Math.round(val) : val;
+        return options.quantize ? Math.round(val) : val;
     },
 
     /**

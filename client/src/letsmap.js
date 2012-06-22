@@ -64,7 +64,7 @@ LetsMap.Util.parseDate = function (num) {
  * The FPS we're aiming for
  * @define {number}
  */
-var LETS_MAP_FPS = 100;
+var LETS_MAP_FPS = 40;
 
 $(document).ready(function () {
     var v = new LetsMap.AppView({}),
