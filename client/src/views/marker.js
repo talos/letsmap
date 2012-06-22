@@ -29,6 +29,11 @@
  */
 LetsMap.Marker = L.Marker.extend({
 
+    options: {
+        icon: new LetsMap.Icon(),
+        clickable: false
+    },
+
     template: $('#markerTemplate'),
 
     /**
@@ -36,9 +41,8 @@ LetsMap.Marker = L.Marker.extend({
      * @this {L.Marker}
      */
     initialize: function (data) {
-        L.Util.setOptions(this, {
-            icon: new LetsMap.Icon()
-        });
+        /*L.Util.setOptions(this, {
+        });*/
 
         /** @type {Date} */
         this._minDate = LetsMap.Util.parseDate(data.range[0]);
@@ -103,6 +107,9 @@ LetsMap.Marker = L.Marker.extend({
         $(this._icon).on('mouseleave', function () {
             map.closePopup();
         });
+        /*$(this._icon).on('click', function (e) {
+            console.log(e);
+        });*/
     },
 
     /**
