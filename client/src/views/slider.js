@@ -72,7 +72,8 @@ LetsMap.SliderView = Backbone.View.extend({
 
         /* Backbone can't have this property munged by closure. */
         this['events'] = {
-            'mousedown .marker': this.startDrag
+            'mousedown .marker': this.startDrag,
+            'click': this.click
         };
 
         $(window).mouseup(this.endDrag);
@@ -133,6 +134,24 @@ LetsMap.SliderView = Backbone.View.extend({
     render: function () {
         this.$marker.text(this.getValue());
         return this;
+    },
+
+    /**
+     * A click on the slider -- bounce us one year to right or left.
+     * @param {jQuery.event} evt
+     * @this {LetsMap.SliderView}
+     */
+    click: function (evt) {
+        /** @type {number} **/
+        var left = this.$marker.position().left - this.initialLeftOffset();
+        var right = left + this.$marker.outerWidth();
+        var x = (evt.pageX - this.initialLeftOffset()) -
+            this.$el.offset().left;
+        if (x > right) {
+            this.setValue(this.getValue() + 1);
+        } else if (x < left) {
+            this.setValue(this.getValue() - 1);
+        }
     },
 
     /**
