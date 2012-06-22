@@ -25,12 +25,20 @@
                 throw new Error("You must specify numFrames");
             }
             this._curFrame = this.options.initialFrame;
+
+            // Our drawing buffer
             var bufferCanvas = L.DomUtil.create('canvas', 'buffer');
             bufferCanvas.style.display = 'none';
             bufferCanvas.width = this.options.tileSize;
             bufferCanvas.height = this.options.tileSize;
             this._bufferCtx = bufferCanvas.getContext('2d');
+
+            // DOM container to temporarily hold images
             this._imageStore = L.DomUtil.create('div', 'imageStore');
+
+            // Obj to keep track of onerror'd tiles, so we don't bombard server
+            // with additional requests
+            this._ignoreUrls = {};
         },
 
         drawTile: function (tile, tilePoint, zoom) {
@@ -44,6 +52,7 @@
                 tileLowerRight = tile._leaflet_pos.add(new L.Point(tileSize, tileSize)),
                 tileBounds = new L.LatLngBounds(map.layerPointToLatLng(tile._leaflet_pos),
                                                 map.layerPointToLatLng(tileLowerRight)),
+                ignoreUrls = this._ignoreUrls,
                 layer = this,
 
                 // check whether a tile is still in view
@@ -96,22 +105,26 @@
                 },
                 img;
 
-            setTimeout(function () {
-                // after delay, are we still in bounds and same zoom?
-                if (isValid()) {
-                    img = L.DomUtil.create('img', 'animation_preload');
-                    imageStore.appendChild(img);
-                    img.crossOrigin = '';
-                    img.src = url;
-                    img.onload = compositeImage;
-                    // clear out the tile if the image doesn't exist.
-                    img.onerror = function () {
-                        var tileCtx = tile.getContext('2d');
-                        tileCtx.clearRect(0, 0, tile.width, tile.height);
-                        imageStore.removeChild(img);
-                    };
-                }
-            }, this.options.delay);
+            // Don't load images we know don't exist.
+            if (!ignoreUrls.hasOwnProperty(url)) {
+                setTimeout(function () {
+                    // after delay, are we still in bounds and same zoom?
+                    if (isValid()) {
+                        img = L.DomUtil.create('img', 'animation_preload');
+                        imageStore.appendChild(img);
+                        img.crossOrigin = '';
+                        img.src = url;
+                        img.onload = compositeImage;
+                        // clear out the tile if the image doesn't exist.
+                        img.onerror = function () {
+                            var tileCtx = tile.getContext('2d');
+                            tileCtx.clearRect(0, 0, tile.width, tile.height);
+                            imageStore.removeChild(img);
+                            ignoreUrls[url] = true;
+                        };
+                    }
+                }, this.options.delay);
+            }
         },
 
         /**
