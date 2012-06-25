@@ -26,7 +26,7 @@
  * @constant {Object}
  */
 var SLIDER_VIEW_DEFAULTS = {
-    max: 2008,
+    max: 2011,
     min: 1966,
 
     // whether to round to whole values.

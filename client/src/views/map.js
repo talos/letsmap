@@ -49,7 +49,7 @@ LetsMap.MapView = Backbone.View.extend({
         /** @type {L.StamenTileLayer} */
         this._heatLayer = new L.TileLayer.Animated(
             'tile/{z}/{y}/{x}.jpg',
-            2009 - 1966
+            2012 - 1966
         );
 
         /** @type {LetsMap.SliderView} */
