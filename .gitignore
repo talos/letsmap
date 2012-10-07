@@ -5,7 +5,12 @@ tools/closure-compiler
 client/public/js
 client/public/tile
 client/public/research
+client/public/tile*
 server/build
+server/config
+server/data
+server/tile*
 server/tmp
 server/run
 server/log
+scraping/

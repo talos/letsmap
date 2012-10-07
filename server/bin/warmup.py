@@ -33,7 +33,7 @@ def y_from_zoom(zoom, lat):
 # Warm up the server by loading up all our tiles
 
 # Work through the different zoom levels we allow
-for zoom in xrange(13, 17):
+for zoom in xrange(12, 13):
     # Determine the x min tile, x max tile, y min tile, and y max tile
     X_MIN_TILE = int(x_from_zoom(zoom, MIN_LON) / TILE_SIZE)
     X_MAX_TILE = int(x_from_zoom(zoom, MAX_LON) / TILE_SIZE)

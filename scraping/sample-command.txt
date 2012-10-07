@@ -1,3 +1,0 @@
-# Sample command to run the scraper
-#
-./caustic nyc/acris-index.json --start-id=32700000 --skip-rows=24637 --input-file=input.txt --input="MaxRows=8000&DocType=" --log >>output.txt 2>error.txt &
