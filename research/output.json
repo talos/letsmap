@@ -27,6 +27,13 @@
             -73.9139079
         ]
     ], 
+    "162 Ave B, New York NY": [
+        "162 Avenue B, New York, NY 10009, USA", 
+        [
+            40.7271002, 
+            -73.9797549
+        ]
+    ], 
     "149 Bleecker Street New York, NY 10012": [
         "149 Bleecker St, New York, NY 10012, USA", 
         [
@@ -263,6 +270,13 @@
         [
             40.7290938, 
             -73.9885889
+        ]
+    ], 
+    "76 East 13th Street, New York NY": [
+        "76 East 13th Street, New York, NY 10003, USA", 
+        [
+            40.7337845, 
+            -73.9905569
         ]
     ], 
     "259 Banker St., Brooklyn, NY": [
@@ -573,6 +587,13 @@
             -73.9617084
         ]
     ], 
+    "700 E 9 St, New York NY": [
+        "700 East 9th Street, New York, NY 10009, USA", 
+        [
+            40.7252245, 
+            -73.9779327
+        ]
+    ], 
     "149 7th Street Brooklyn, NY 11215": [
         "149 7th St, Brooklyn, NY 11215, USA", 
         [
@@ -655,6 +676,13 @@
         [
             40.679167, 
             -73.983473
+        ]
+    ], 
+    "1790 Broadway New York, NY": [
+        "1790 Broadway, New York, NY 10001, USA", 
+        [
+            40.7668879, 
+            -73.9815229
         ]
     ], 
     "169 3rd. ave. Bronx, NY": [
@@ -781,6 +809,13 @@
         [
             40.667065, 
             -73.974724
+        ]
+    ], 
+    "154 Ludlow St, New York NY": [
+        "154 Ludlow Street, New York, NY 10002, USA", 
+        [
+            40.7208858, 
+            -73.9878534
         ]
     ], 
     "315 West 44th Street New York, NY 10036": [
@@ -1091,11 +1126,25 @@
             -73.983865
         ]
     ], 
+    "547 West 21st Street, New York NY": [
+        "547 West 21st Street, New York, NY 10011, USA", 
+        [
+            40.747496, 
+            -74.007088
+        ]
+    ], 
     "256 West 23rd Street New York, NY 10011": [
         "256 W 23rd St, New York, NY 10011, USA", 
         [
             40.744779, 
             -73.9980099
+        ]
+    ], 
+    "169 Ave A, New York NY": [
+        "169 Avenue A, New York, NY 10009, USA", 
+        [
+            40.728341, 
+            -73.982211
         ]
     ], 
     "155 East 149th Street, Bronx, NY": [
