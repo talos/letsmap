@@ -1621,46 +1621,48 @@
         "http://www.brooklynvegan.com/archives/2007/09/meanwhile_beiru.html"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "169 Ave A, New York NY",
+    "range": [19890000, 20020800],
+    "title": "Brownie's",
     "sources": [
-        ""
+        "http://www.thefader.com/2002/07/09/indie-fave-venue-brownies-to-cease-live-shows/",
+        "http://web.archive.org/web/20031013014604/http://www.hifi169.com/brownies/about/index.html"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "162 Ave B, New York NY",
+    "range": [19960404, 20120430],
+    "title": "Lakeside Lounge",
     "sources": [
-        ""
+        "http://www.lakesidelounge.com/Lakeside_Lounge/Lakeside_Lounge_NYC.html"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "154 Ludlow St, New York NY",
+    "range": [20030000, -1],
+    "title": "The Living Room",
     "sources": [
-        ""
+        "http://www.livingroomny.com/our-story"
     ]
 },{
-    "address": "",
-    "range": [null, null],
-    "title": "",
+    "address": "700 E 9 St, New York NY",
+    "range": [20051200, 20110802],
+    "title": "Banjo Jim's",
     "sources": [
-        ""
+        "http://3.bp.blogspot.com/-MQh6g5xrICE/TjVJQWbuWXI/AAAAAAAAwFY/TmtbqZi5J7o/s1600/bj.png",
+        "http://evgrieve.com/2011/07/banjo-jims-space-to-become-home-to.html"
     ]
 },{
-    "address": "",
+    "address": "547 West 21st Street, New York NY",
     "range": [null, null],
-    "title": "",
+    "title": "The Marquee",
     "sources": [
-        ""
+        "http://vassifer.blogs.com/alexinnyc/2005/10/top_ten_sincecl.html"
     ]
 },{
-    "address": "",
+    "address": "76 East 13th Street, New York NY",
     "range": [null, null],
-    "title": "",
+    "title": "The Grand",
     "sources": [
-        ""
+        "http://vassifer.blogs.com/alexinnyc/2005/10/top_ten_sincecl.html"
     ]
 },{
     "address": "",
